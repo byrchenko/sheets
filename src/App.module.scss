@@ -1,0 +1,49 @@
+:global {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+%cell {
+  position: relative;
+  min-width: 100px;
+  vertical-align: middle !important;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    box-sizing: border-box;
+  }
+
+  //span {
+  //  color: #898989;
+  //}
+}
+
+.headerCell {
+  @extend %cell;
+  padding: 3px 10px !important;
+
+  span {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+  }
+}
+
+.cell {
+  @extend %cell;
+  padding: 5px 10px !important;
+
+  span {
+    font-size: 10px;
+    text-align: right;
+  }
+}

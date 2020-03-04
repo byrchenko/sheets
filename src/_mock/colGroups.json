@@ -1,0 +1,35 @@
+[
+  {
+    "label": "Основная информация",
+    "name": "common",
+    "span": 9,
+    "colorList": [
+      "#FFF"
+    ]
+  },
+  {
+    "label": "Информация о продаже",
+    "name": "selling",
+    "span": 7,
+    "colorList": [
+      "#FBFBFB"
+    ]
+  },
+  {
+    "label": "Складские запасы",
+    "span": 3,
+    "name": "store",
+    "colorList": [
+      "#FFFEF0"
+    ]
+  },
+  {
+    "label": "Наименование поставщика",
+
+    "name": "provider",
+    "colorList": [
+      "#F4FFF0",
+      "rgba(82, 199, 249, 0.05)"
+    ]
+  }
+]

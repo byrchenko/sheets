@@ -1,0 +1,147 @@
+[
+  {
+    "label": "№",
+    "dataKey": "id",
+    "group": "common",
+    "width": 100,
+    "fixed": true,
+    "filterless": true
+  },
+  {
+    "label": "Артикул",
+    "dataKey": "vendorCode",
+    "group": "common",
+    "width": 100,
+    "edit": "string"
+  },
+  {
+    "label": "Кол-во",
+    "dataKey": "quantity",
+    "group": "common",
+    "width": 100,
+    "edit": "number",
+    "footer": "sum"
+  },
+  {
+    "label": "Наименование",
+    "dataKey": "productName",
+    "group": "common",
+    "width": 300,
+    "edit": "string"
+  },
+  {
+    "label": "Привязка к 1С",
+    "dataKey": "productId",
+    "group": "common",
+    "width": 90,
+    "filterless": true,
+    "edit": "product",
+    "footer": "sum"
+  },
+  {
+    "label": "Доп расходы",
+    "dataKey": "addExpenses",
+    "group": "common",
+    "width": 100,
+    "edit": "number",
+    "footer": "sum"
+  },
+  {
+    "label": "Коммент. менеджера",
+    "dataKey": "managerComment",
+    "group": "common",
+    "width": 100,
+    "edit": "string"
+  },
+  {
+    "label": "Коммент для КП",
+    "dataKey": "commentForCP",
+    "group": "common",
+    "width": 100,
+    "edit": "string"
+  },
+  {
+    "label": "Дата поставки",
+    "dataKey": "deliveryDate",
+    "group": "common",
+    "width": 100,
+    "edit": "date"
+  },
+  {
+    "label": "Кол-во к продаже",
+    "dataKey": "quantityForSale",
+    "group": "selling",
+    "width": 100,
+    "edit": "number",
+    "footer": "sum"
+  },
+  {
+    "label": "Себестоимость",
+    "dataKey": "ownPrice",
+    "group": "selling",
+    "width": 100,
+    "fixed": true,
+    "edit": null,
+    "footer": "sum"
+  },
+  {
+    "label": "Желаема маржа",
+    "dataKey": "margin",
+    "group": "selling",
+    "width": 100,
+    "edit": "number"
+  },
+  {
+    "label": "Цена продажи",
+    "dataKey": "sellingPrice",
+    "group": "selling",
+    "width": 100,
+    "edit": "number"
+  },
+  {
+    "label": "РРЦ",
+    "dataKey": "retailPrice",
+    "group": "selling",
+    "width": 100,
+    "edit": null,
+    "footer": "sum"
+  },
+  {
+    "label": "Сумма продажи",
+    "dataKey": "sellingSum",
+    "group": "selling",
+    "width": 100,
+    "edit": null,
+    "footer": "sum"
+  },
+  {
+    "label": "Прибыль",
+    "dataKey": "profit",
+    "group": "selling",
+    "width": 100,
+    "edit": "number",
+    "footer": "sum"
+  },
+  {
+    "label": "Остаток",
+    "dataKey": "rest",
+    "group": "store",
+    "width": 100,
+    "edit": null
+  },
+  {
+    "label": "Цена",
+    "dataKey": "storePrice",
+    "group": "store",
+    "width": 100,
+    "edit": null
+  },
+  {
+    "label": "Забрать со склада",
+    "dataKey": "take",
+    "group": "store",
+    "width": 100,
+    "edit": "number",
+    "footer": "sum"
+  }
+]
