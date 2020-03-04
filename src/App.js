@@ -135,12 +135,14 @@ class App extends React.Component {
     addRow() {
         return () => {
             this.setState(prevState => {
-                const {grid} = prevState;
+                const {rows} = prevState;
+
+                console.log(rows.length)
 
                 return {
-                    grid: [
-                        ...grid,
-                        this.createEmptyRow(grid.length - 1)
+                    rows: [
+                        ...rows,
+                        this.createEmptyRow(rows.length + 1)
                     ]
                 }
             })
@@ -197,11 +199,17 @@ class App extends React.Component {
                     }}
                 />
 
-                <button onClick={this.addRow()}>
+                <button
+                    className={css.row}
+                    onClick={this.addRow()}
+                >
                     Add row
                 </button>
 
-                <button onClick={this.addSupplier("Ayacom")}>
+                <button
+                    className={css.supplier}
+                    onClick={this.addSupplier("Ayacom")}
+                >
                     Add supplier
                 </button>
             </>
