@@ -1,7 +1,7 @@
 [
   {
     "label": "№",
-    "dataKey": "id",
+    "code": "id",
     "group": "common",
     "width": 100,
     "fixed": true,
@@ -9,14 +9,14 @@
   },
   {
     "label": "Артикул",
-    "dataKey": "vendorCode",
+    "code": "vendorCode",
     "group": "common",
     "width": 100,
     "edit": "string"
   },
   {
     "label": "Кол-во",
-    "dataKey": "quantity",
+    "code": "quantity",
     "group": "common",
     "width": 100,
     "edit": "number",
@@ -24,14 +24,14 @@
   },
   {
     "label": "Наименование",
-    "dataKey": "productName",
+    "code": "productName",
     "group": "common",
     "width": 300,
     "edit": "string"
   },
   {
     "label": "Привязка к 1С",
-    "dataKey": "productId",
+    "code": "productId",
     "group": "common",
     "width": 90,
     "filterless": true,
@@ -40,7 +40,7 @@
   },
   {
     "label": "Доп расходы",
-    "dataKey": "addExpenses",
+    "code": "addExpenses",
     "group": "common",
     "width": 100,
     "edit": "number",
@@ -48,28 +48,28 @@
   },
   {
     "label": "Коммент. менеджера",
-    "dataKey": "managerComment",
+    "code": "managerComment",
     "group": "common",
     "width": 100,
     "edit": "string"
   },
   {
     "label": "Коммент для КП",
-    "dataKey": "commentForCP",
+    "code": "commentForCP",
     "group": "common",
     "width": 100,
     "edit": "string"
   },
   {
     "label": "Дата поставки",
-    "dataKey": "deliveryDate",
+    "code": "deliveryDate",
     "group": "common",
     "width": 100,
     "edit": "date"
   },
   {
     "label": "Кол-во к продаже",
-    "dataKey": "quantityForSale",
+    "code": "quantityForSale",
     "group": "selling",
     "width": 100,
     "edit": "number",
@@ -77,7 +77,7 @@
   },
   {
     "label": "Себестоимость",
-    "dataKey": "ownPrice",
+    "code": "ownPrice",
     "group": "selling",
     "width": 100,
     "fixed": true,
@@ -86,21 +86,21 @@
   },
   {
     "label": "Желаема маржа",
-    "dataKey": "margin",
+    "code": "margin",
     "group": "selling",
     "width": 100,
     "edit": "number"
   },
   {
     "label": "Цена продажи",
-    "dataKey": "sellingPrice",
+    "code": "sellingPrice",
     "group": "selling",
     "width": 100,
     "edit": "number"
   },
   {
     "label": "РРЦ",
-    "dataKey": "retailPrice",
+    "code": "retailPrice",
     "group": "selling",
     "width": 100,
     "edit": null,
@@ -108,7 +108,7 @@
   },
   {
     "label": "Сумма продажи",
-    "dataKey": "sellingSum",
+    "code": "sellingSum",
     "group": "selling",
     "width": 100,
     "edit": null,
@@ -116,7 +116,7 @@
   },
   {
     "label": "Прибыль",
-    "dataKey": "profit",
+    "code": "profit",
     "group": "selling",
     "width": 100,
     "edit": "number",
@@ -124,21 +124,21 @@
   },
   {
     "label": "Остаток",
-    "dataKey": "rest",
+    "code": "rest",
     "group": "store",
     "width": 100,
     "edit": null
   },
   {
     "label": "Цена",
-    "dataKey": "storePrice",
+    "code": "storePrice",
     "group": "store",
     "width": 100,
     "edit": null
   },
   {
     "label": "Забрать со склада",
-    "dataKey": "take",
+    "code": "take",
     "group": "store",
     "width": 100,
     "edit": "number",

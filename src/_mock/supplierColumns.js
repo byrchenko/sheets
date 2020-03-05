@@ -25,6 +25,6 @@ export default [
     },
     {
         label: "Сумма",
-        code: "sum",
+        code: "supplierSum",
     },
 ];

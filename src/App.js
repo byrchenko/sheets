@@ -7,6 +7,7 @@ import groups from "./_mock/colGroups";
 import rows from "./_mock/rows";
 import supplierColumns from "./_mock/supplierColumns";
 import moment from "moment";
+import CalculationsService from "./_service/CalculationsService";
 
 class App extends React.Component {
     constructor(props) {
@@ -93,7 +94,8 @@ class App extends React.Component {
                                 return {
                                     className: css.cell,
                                     value: "",
-                                    label: item.code
+                                    label: item.code,
+                                    supplier: name
                                 }
                             })
                         ]
@@ -113,15 +115,15 @@ class App extends React.Component {
             if (i === 0) {
                 row.push({
                     className: css.cell,
-                    label: columns[i].dataKey,
+                    label: columns[i].code,
                     value: id,
                     readOnly: true
                 })
             } else {
                 row.push({
-                    label: columns[i].dataKey,
+                    label: columns[i].code,
                     className: css.cell,
-                    value: item ? item[columns[i].dataKey] : ""
+                    value: item ? item[columns[i].code] : ""
                 });
             }
         }
@@ -136,8 +138,6 @@ class App extends React.Component {
         return () => {
             this.setState(prevState => {
                 const {rows} = prevState;
-
-                console.log(rows.length)
 
                 return {
                     rows: [
@@ -157,6 +157,55 @@ class App extends React.Component {
         return rows.map((el, index) => {
             return this.createEmptyRow(index + 1, el)
         })
+    }
+
+    onChange() {
+        return changes => {
+            const {groups, columns, rows} = this.state;
+
+            const grid = [
+                groups,
+                columns,
+                ...rows
+            ];
+
+            /**
+             * Apply changes
+             */
+            changes.forEach(({cell, row, col, value}) => {
+                grid[row][col] = {...grid[row][col], value};
+
+                /**
+                 * Sale amount
+                 */
+                if (["supplierQuantity", "take"].includes(cell.label)) {
+                    const Calc = new CalculationsService(grid);
+
+                    const newValue = Calc.calcSaleAmount(row);
+
+                    grid[row].forEach(item => {
+                        return item.label === "quantityForSale" ? item.value = newValue : null
+                    })
+                }
+
+                /**
+                 * Prime cost
+                 */
+                if(["take", "quantityForSale", "addExpenses", "supplierSum"].includes(cell.label)) {
+                    const Calc = new CalculationsService(grid);
+
+                    const newValue = Calc.calcPrimeCost(row);
+
+                    grid[row].forEach(item => {
+                        return item.label === "ownPrice" ? item.value = newValue : null
+                    })
+                }
+            });
+
+            this.setState({
+                rows: grid.slice(2)
+            })
+        }
     }
 
     render() {
@@ -182,21 +231,7 @@ class App extends React.Component {
 
                         return cell.value
                     }}
-                    onCellsChanged={changes => {
-                        const {groups, columns, rows} = this.state;
-
-                        const grid = [
-                            groups,
-                            columns,
-                            ...rows
-                        ];
-
-                        changes.forEach(({cell, row, col, value}) => {
-                            grid[row][col] = {...grid[row][col], value}
-                        });
-
-                        this.setState({grid})
-                    }}
+                    onCellsChanged={this.onChange()}
                 />
 
                 <button
