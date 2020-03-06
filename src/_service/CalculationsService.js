@@ -174,21 +174,109 @@ export default class CalculationsService {
         const saleAmount = this.calcSaleAmount(rowIndex);
         const stockSum = this.calcStockSum(row);
 
-        console.log(suppliersSum);
-
         const allSuppliersSum = suppliersSum.reduce((acc, next) => acc + next, 0);
 
         const totalPrimeCost = stockSum + additionalExpenses + allSuppliersSum;
-
-        console.log(stockSum);
-        console.log(allSuppliersSum);
-        console.log(additionalExpenses);
 
         if (!totalPrimeCost || !saleAmount) {
             return 0
         }
 
         return totalPrimeCost / saleAmount;
+    }
+
+    /**
+     * Get sale price
+     *
+     * @param row {object}
+     * @returns {number}
+     */
+    getSalePrice(row) {
+        return +row.find(item => {
+            return item.label === "sellingPrice"
+        }).value;
+    }
+
+    /**
+     * Calculating margin
+     *
+     * @param rowIndex {number}
+     * @returns {number}
+     */
+    calcMargin(rowIndex) {
+        const row = this.getCurrentRow(rowIndex);
+        const salePrice = this.getSalePrice(row);
+        const primeCost = this.calcPrimeCost(rowIndex);
+
+        const isPriceSetted = row.find(item => item.label === "sellingPrice").isManualySetted;
+
+        if (!isPriceSetted) {
+            return +row.find(item => item.label === "margin").value;
+        }
+
+        if (!primeCost || !salePrice) {
+            return 0
+        }
+
+        return (salePrice - primeCost) / primeCost * 100
+    }
+
+    /**
+     * Calculating sale price
+     *
+     * @returns {number}
+     * @param rowIndex
+     */
+    calcSalePrice(rowIndex) {
+        const row = this.getCurrentRow(rowIndex);
+
+        /**
+         * Checks if price was set manually, and returns value if true
+         */
+        const price = row.find(item => {
+            return item.label === "sellingPrice"
+        });
+
+        if (price.isManualySetted) {
+            return +price.value;
+        }
+
+        /**
+         * Calculate price from margin
+         */
+        const primeCost = +row.find(item => item.label === "ownPrice").value;
+        const margin = +row.find(item => item.label === "margin").value;
+
+        return primeCost + primeCost * margin / 100;
+    }
+
+    /**
+     * Calculating sale sum
+     *
+     * @param rowIndex {number}
+     * @returns {number}
+     */
+    calcSaleSum(rowIndex) {
+        const row = this.getCurrentRow(rowIndex);
+
+        const salePrice = this.calcSalePrice(rowIndex);
+        const saleAmount = this.calcSaleAmount(rowIndex);
+
+        return salePrice * saleAmount;
+    }
+
+    /**
+     * Calc profit
+     *
+     * @param rowIndex {number}
+     * @returns {number}
+     */
+    calcProfit(rowIndex) {
+        const saleAmount = this.calcSaleAmount(rowIndex);
+        const primeCost = this.calcPrimeCost(rowIndex);
+        const saleSum = this.calcSaleSum(rowIndex);
+
+        return saleSum - primeCost * saleAmount;
     }
 }
 

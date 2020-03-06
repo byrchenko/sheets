@@ -63,6 +63,7 @@
   cursor: pointer;
   outline: none;
   transition: transform .15s ease-out;
+  z-index: 10;
 
   &:hover {
     $size: 1.1;

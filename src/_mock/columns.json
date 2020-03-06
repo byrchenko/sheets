@@ -76,7 +76,7 @@
     "footer": "sum"
   },
   {
-    "label": "Себестоимость",
+    "label": "Себестоимость, шт.",
     "code": "ownPrice",
     "group": "selling",
     "width": 100,
@@ -92,7 +92,7 @@
     "edit": "number"
   },
   {
-    "label": "Цена продажи",
+    "label": "Цена продажи, шт.",
     "code": "sellingPrice",
     "group": "selling",
     "width": 100,

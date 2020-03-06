@@ -8,6 +8,8 @@ import rows from "./_mock/rows";
 import supplierColumns from "./_mock/supplierColumns";
 import moment from "moment";
 import CalculationsService from "./_service/CalculationsService";
+import SuppliersPopup from "./SuppliersPopup";
+import suppliers from "./_mock/suppliers";
 
 class App extends React.Component {
     constructor(props) {
@@ -19,7 +21,27 @@ class App extends React.Component {
         this.state = {
             groups: this.createHeaderGroups(),
             columns: this.createHeaderColumns(),
-            rows: this.createRows()
+            rows: this.createRows(),
+            suppliersPopup: false
+        }
+    }
+
+    /**
+     *
+     */
+    openSuppliersPopup() {
+        return () => {
+            this.setState({suppliersPopup: true})
+        }
+    }
+
+
+    /**
+     *
+     */
+    closeSuppliersPopup() {
+        return () => {
+            this.setState({suppliersPopup: false})
         }
     }
 
@@ -60,12 +82,8 @@ class App extends React.Component {
         return result;
     }
 
-    /**
-     *
-     * @param name
-     */
-    addSupplier(name) {
-        return () => {
+    addSupplier() {
+        return (name) => {
             this.setState(prevState => {
                 return {
                     columns: [
@@ -119,6 +137,20 @@ class App extends React.Component {
                     value: id,
                     readOnly: true
                 })
+            } else if (
+                columns[i].code === "ownPrice"
+                || columns[i].code === "retailPrice"
+                || columns[i].code === "sellingSum"
+                || columns[i].code === "profit"
+                || columns[i].code === "rest"
+                || columns[i].code === "storePrice"
+            ) {
+                row.push({
+                    label: columns[i].code,
+                    className: css.cell,
+                    value: item ? item[columns[i].code] : "",
+                    readOnly: true
+                });
             } else {
                 row.push({
                     label: columns[i].code,
@@ -189,7 +221,22 @@ class App extends React.Component {
                 /**
                  * Change cell value
                  */
-                grid[row][col] = {...grid[row][col], value};
+                if (cell.label === "sellingPrice") {
+                    grid[row][col] = {
+                        ...grid[row][col],
+                        value,
+                        isManualySetted: true
+                    };
+                } else if (cell.label === "margin") {
+                    grid[row].forEach(item => item.label === "sellingPrice" ?
+                        item.isManualySetted = false
+                        : null
+                    );
+
+                    grid[row][col] = {...grid[row][col], value};
+                } else {
+                    grid[row][col] = {...grid[row][col], value};
+                }
 
                 const Calc = new CalculationsService(grid);
 
@@ -204,6 +251,22 @@ class App extends React.Component {
                     if (item.label === "ownPrice") {
                         return item.value = Calc.calcPrimeCost(row)
                     }
+
+                    if (item.label === "margin") {
+                        return item.value = Calc.calcMargin(row)
+                    }
+
+                    if (item.label === "sellingSum") {
+                        return item.value = Calc.calcSaleSum(row)
+                    }
+
+                    if (item.label === "sellingPrice") {
+                        return item.value = Calc.calcSalePrice(row)
+                    }
+
+                    if (item.label === "profit") {
+                        return item.value = Calc.calcProfit(row)
+                    }
                 });
             });
 
@@ -214,7 +277,7 @@ class App extends React.Component {
     }
 
     render() {
-        const {groups, columns, rows} = this.state;
+        const {groups, columns, rows, suppliersPopup} = this.state;
 
         return (
             <>
@@ -239,19 +302,33 @@ class App extends React.Component {
                     onCellsChanged={this.onChange()}
                 />
 
-                <button
-                    className={css.row}
-                    onClick={this.addRow()}
-                >
-                    Add row
-                </button>
+                {!suppliersPopup && (
+                    <>
+                        <button
+                            className={css.row}
+                            onClick={this.addRow()}
+                        >
+                            Add row
+                        </button>
 
-                <button
-                    className={css.supplier}
-                    onClick={this.addSupplier("Ayacom")}
-                >
-                    Add supplier
-                </button>
+
+                        <button
+                            className={css.supplier}
+                            // onClick={this.addSupplier("Ayacom")}
+                            onClick={this.openSuppliersPopup()}
+                        >
+                            Add supplier
+                        </button>
+                    </>
+                )}
+
+                {suppliersPopup && (
+                    <SuppliersPopup
+                        list={suppliers}
+                        addSupplier={this.addSupplier()}
+                        closePopup={this.closeSuppliersPopup()}
+                    />
+                )}
             </>
         )
     }

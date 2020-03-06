@@ -1,0 +1,1994 @@
+[
+  {
+    "id": 1461,
+    "name": "123",
+    "xmlId": "1461",
+    "vendorCode": "",
+    "prices": [
+      {
+        "id": 1,
+        "price": 123,
+        "currency": "KZT",
+        "name": "BASE"
+      }
+    ],
+    "rests": null
+  },
+  {
+    "id": 8112,
+    "name": "10 HSS-Co Сверло 4 мм",
+    "xmlId": "74f71e37-887c-11e9-a217-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 14
+  },
+  {
+    "id": 8113,
+    "name": "10 HSS-Co Сверло 6 мм",
+    "xmlId": "679c8ba8-8ea3-11e9-a219-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8114,
+    "name": "1С-Битрикс24: КП 50 (льготное продление)",
+    "xmlId": "8a36a43b-2152-11ea-a244-005056ada24b",
+    "vendorCode": "KBITR_KP50LPR",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8115,
+    "name": "7-BAY набор НГ шаров АВ-15",
+    "xmlId": "533ffd77-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8116,
+    "name": "Acrobat Standard 2017 Windows Russian AOO License TLP (1 - 7,999)",
+    "xmlId": "9ab641f6-ade0-11e9-a22a-005056ada24b",
+    "vendorCode": "65280451AD01A00",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8117,
+    "name": "Action Видеокамера GoPro Hero 7 Silver Edition (CHDHC-601)",
+    "xmlId": "6fbfc056-ca42-11e9-a22f-005056ada24b",
+    "vendorCode": "CHDHC-601",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8118,
+    "name": "Beeline 4G WI-FI роутер L02Hi (месяц)",
+    "xmlId": "d54fb3ee-f590-11e9-a234-005056ada24b",
+    "vendorCode": "L02Hi",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8119,
+    "name": "Beeline Стартовый пакет Интернет Базовый 4G Router (месяц)",
+    "xmlId": "94e5f0f0-f591-11e9-a234-005056ada24b",
+    "vendorCode": "L02Hi",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8120,
+    "name": "Body Спрей грунт 992 серый",
+    "xmlId": "0a079039-bce8-11e9-a22e-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8121,
+    "name": "Cовместная маркетинговая активность ID - 10288814",
+    "xmlId": "dd12cdf4-18be-11e9-a20a-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8122,
+    "name": "Cовместная маркетинговая активность ID - 10294674",
+    "xmlId": "984a4e5f-64e5-11e9-a210-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8123,
+    "name": "Cовместная маркетинговая активность ID - 10305442",
+    "xmlId": "aba83d1d-a9f7-11e9-a226-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8124,
+    "name": "Cовместная маркетинговая активность ID - 10320766",
+    "xmlId": "317c37c4-0f3c-11ea-a243-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8125,
+    "name": "Cовместная маркетинговая активность ID -10258910",
+    "xmlId": "4a08fb67-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8126,
+    "name": "Cовместная маркетинговая активность ID -10268298",
+    "xmlId": "5eef4fe7-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8127,
+    "name": "Cовместная маркетинговая активность ID -10268299",
+    "xmlId": "664b16cc-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8128,
+    "name": "Cовместная маркетинговая активность ID -10282765",
+    "xmlId": "5264c08a-f46a-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8129,
+    "name": "D-Link DEM-302S-BXD\/10A1A WDM SFP-трансивер для одномодового оптического кабеля (до 2 км)",
+    "xmlId": "03c4c643-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "DEM-302S-BXD\/10A1A",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8130,
+    "name": "D-Link DEM-302S-BXU\/10A1A WDM SFP-трансивер для одномодового оптического кабеля (до 2 км)",
+    "xmlId": "73b1a99e-6277-11e9-a210-000c2935d274",
+    "vendorCode": "DEM-302S-BXU\/10A1A",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8131,
+    "name": "EFI Colour Profiler 4.6 Suite Xerox Versant180 497N03087",
+    "xmlId": "558d5557-a9df-11e9-a226-005056ada24b",
+    "vendorCode": "497N03087",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8132,
+    "name": "ETAP USB Активатор",
+    "xmlId": "dc2f4b0a-6a4b-11e9-a210-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8133,
+    "name": "ETAP брошюра на бумаге",
+    "xmlId": "fc4979ff-6a4b-11e9-a210-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8134,
+    "name": "ETAP инструкция по установке на бумаге",
+    "xmlId": "ed11b9d8-6a4b-11e9-a210-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8135,
+    "name": "EXC. Валютный контроль. Проверка и прием внешнеэкономического контракта без присвоения Учетного номе",
+    "xmlId": "b0ca1617-5b8c-11e9-a210-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8136,
+    "name": "FF Core Advanced Automation Module Xerox Versant180 320S01044",
+    "xmlId": "9820c359-a9e0-11e9-a226-005056ada24b",
+    "vendorCode": "320S01044",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8137,
+    "name": "FF Core Advanced Prepress Module Xerox Versant180 320S00777",
+    "xmlId": "87760d44-a9e0-11e9-a226-005056ada24b",
+    "vendorCode": "320S00777",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8138,
+    "name": "FF Core Base Xerox Versant180 300S02202",
+    "xmlId": "3d504ed3-a9e0-11e9-a226-005056ada24b",
+    "vendorCode": "300S02202",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8139,
+    "name": "GBC ADVANCE PUNCH PR Xerox Versant180 497K18750",
+    "xmlId": "30c4db6b-a9e0-11e9-a226-005056ada24b",
+    "vendorCode": "497K18750",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8140,
+    "name": "GBC ADVANCE PUNCH PR Xerox Versant180 497K18750 (сборка)",
+    "xmlId": "49d521a3-ad43-11e9-a22a-005056ada24b",
+    "vendorCode": "497K18750",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8141,
+    "name": "GSN PATROL 803 Извещатель оптико-электронный двойной технологии ИК+FG",
+    "xmlId": "bd510720-8c3c-11e9-a218-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8142,
+    "name": "Hikvision Bracket-46'' 2*3 bracket -Z-LB кронштейн на стену для видеостены 2*3 ",
+    "xmlId": "c375eec3-1fbb-11e9-a20d-000c2935d274",
+    "vendorCode": "46'' 2*3 bracket -Z-LB",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8143,
+    "name": "Hikvision CABINET-46＂FRAME-HKC Рама кронштейна для видеостены  ",
+    "xmlId": "4fa2274e-1fbc-11e9-a20d-000c2935d274",
+    "vendorCode": "CABINET-46\" FRAME",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8144,
+    "name": "Hikvision DS-1275ZJ-4626 Монтажное основание для DS-2CD4626FWD-IZHS\/P",
+    "xmlId": "fd0b3405-1fbb-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-1275ZJ-4626",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8145,
+    "name": "Hikvision DS-1275ZJ-SUS Кронштейн на столб для DS-2CD5A85G0-IZH",
+    "xmlId": "0ab4cb37-1fbc-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-1275ZJ-SUS",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8146,
+    "name": "Hikvision DS-1275ZJ-SUS Кронштейн на столб для DS-2DF8250I5X-AELW",
+    "xmlId": "4132b956-1fbc-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-1275ZJ-SUS",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8147,
+    "name": "Hikvision DS-1276ZJ-SUS Кронштейн на стену для DS-2CD2545FWD-I",
+    "xmlId": "1a7dea93-1fbc-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-1276ZJ-SUS",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8148,
+    "name": "Hikvision DS-1280ZJ-DM46 Монтажная коробка",
+    "xmlId": "91bcc9e2-1fbc-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-1280ZJ-DM46",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8149,
+    "name": "Hikvision DS-1475ZJ-SUS Кронштейн на столб",
+    "xmlId": "83f905fc-1fbc-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-1475ZJ-SUS",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8150,
+    "name": "Hikvision DS-1476ZJ-SUS Кронштейн на стену",
+    "xmlId": "78a3a6e0-1fbc-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-1476ZJ-SUS",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8151,
+    "name": "Hikvision DS-1663ZJ Кронштейн на потолок для поворотных камер. Длина 500 мм",
+    "xmlId": "5da19aac-1fbc-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-1663ZJ",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8152,
+    "name": "Hikvision DS-1673ZJ Кронштейн",
+    "xmlId": "6b11e161-1fbc-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-1673ZJ",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8153,
+    "name": "Hikvision DS-2CD2143G0-IS (2,8 ММ), IP видеокамера 4 МП купольная",
+    "xmlId": "85ef656f-f6ea-11e9-a239-005056ada24b",
+    "vendorCode": "DS-2CD2143G0-IS (2,8 ММ)",
+    "prices": null,
+    "rests": 10
+  },
+  {
+    "id": 8154,
+    "name": "Hikvision DS-2CD2545FWD-I (2,8мм) IP видеокамера купольная",
+    "xmlId": "5f4e8b13-1fbb-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-2CD2545FWD-I 2,8мм",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8155,
+    "name": "Hikvision DS-2CD2545FWD-I (4мм)  IP видеокамера купольная",
+    "xmlId": "77ddaa76-1fbb-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-2CD2545FWD-I 4мм",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8156,
+    "name": "Hikvision DS-2CD4626FWD-IZHS\/P Антивандальная 2 МП IP-камера",
+    "xmlId": "40630064-1fbb-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-2CD4626FWD-IZHS\/P(2.8-12mm)",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8157,
+    "name": "Hikvision DS-2CD5A85G0-IZHS (2.8-12 мм) IP видеокамера 8 МП",
+    "xmlId": "2b13eafc-1fbb-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-2CD5A85G0-IZHS",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8158,
+    "name": "Hikvision DS-2CD7A26G0-IZH (2.8-12 мм) IP видеокамера 2МП",
+    "xmlId": "53298bdd-1fbb-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-2CD7A26G0-IZH (2.8~12mm)",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8159,
+    "name": "Hikvision DS-2DF8250I5X-AELW PTZ IP видеокамера, 2МП",
+    "xmlId": "b8eadfd0-1fbc-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-2DF8250I5X-AELW",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8160,
+    "name": "Hikvision DS-3E0318P-E PoE свитч 16-портовый",
+    "xmlId": "8626eb63-1fbb-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-3E0318P-E",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8161,
+    "name": "Hikvision DS-6916UDI  Декодер 16-ти канальный, декодирование 12 МП",
+    "xmlId": "f444c886-1fbd-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-6916UDI",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8162,
+    "name": "Hikvision DS-7616NI-K2\/16P видеорегистратор 16-канальный, 16PoE, EasyIP3.0",
+    "xmlId": "ab703754-1b09-11ea-a243-005056ada24b",
+    "vendorCode": "DS-7616NI-K2\/16P",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8163,
+    "name": "Hikvision DS-A82024D NAS накопитель",
+    "xmlId": "1354230d-1fbe-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-A82024D",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8164,
+    "name": "Hikvision DS-AJ7824D полка расширения к NAS-накопителю на 24 диска",
+    "xmlId": "27791676-1fbe-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-AJ7824D",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8165,
+    "name": "Hikvision DS-C10S-HI4T  Плата входа ",
+    "xmlId": "5318520f-1fbe-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-C10S-HI4T",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8166,
+    "name": "Hikvision DS-C10S-HO4T  Плата выхода ",
+    "xmlId": "5eeed4f0-1fbe-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-C10S-HO4T",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8167,
+    "name": "Hikvision DS-C10S-S09T Контроллер видеостены",
+    "xmlId": "46586250-1fbe-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-C10S-S09T",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8168,
+    "name": "Hikvision DS-D2046NL-C Панель 46\", шов 3,5 мм",
+    "xmlId": "01666fb7-1fbe-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-D2046NL-C",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8169,
+    "name": "Hikvision DS-IE6316-E\/FA Сервер распознавания лиц (до 16 камер)",
+    "xmlId": "390707a0-1fbe-11e9-a20d-000c2935d274",
+    "vendorCode": "DS-IE6316-E\/FA",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8170,
+    "name": "Hikvision HikCentral-ANPR-Base",
+    "xmlId": "c87a7260-1fbd-11e9-a20d-000c2935d274",
+    "vendorCode": "HikCentral-ANPR-Base",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8171,
+    "name": "Hikvision HikCentral-FacialReco-Base",
+    "xmlId": "e78028e0-1fbd-11e9-a20d-000c2935d274",
+    "vendorCode": "HikCentral-FacialReco-Base",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8172,
+    "name": "Hikvision HikCentral-SmartWall-Base Интеллектуальный модуль для видеостены",
+    "xmlId": "db5d8649-1fbd-11e9-a20d-000c2935d274",
+    "vendorCode": "HikCentral-SmartWall-Base",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8173,
+    "name": "Hikvision HikCentral-VSS-Base\/HW\/E5\/300Ch Сервер управления",
+    "xmlId": "9d844760-1fbd-11e9-a20d-000c2935d274",
+    "vendorCode": "HikCentral-VSS-Base\/HW\/E5\/300Ch",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8174,
+    "name": "Hikvision HK-1.25G-20-1310 SFP модуль",
+    "xmlId": "ed125d01-1fbb-11e9-a20d-000c2935d274",
+    "vendorCode": "HK-1.25G-20-1310",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8175,
+    "name": "Hikvision HK-1.25G-20-1550 SFP модуль",
+    "xmlId": "d92dcb75-1fbb-11e9-a20d-000c2935d274",
+    "vendorCode": "HK-1.25G-20-1550",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8176,
+    "name": "HP JetDirect 610N Print Server Network Interface Card J4169A",
+    "xmlId": "5f9e1842-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "J4169A",
+    "prices": null,
+    "rests": 2
+  },
+  {
+    "id": 8177,
+    "name": "IDM INTERFACE DECURLER Xerox Versant180 097S04745",
+    "xmlId": "ee0244fd-a9dd-11e9-a226-005056ada24b",
+    "vendorCode": "097S04745",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8178,
+    "name": "INTERPOSER MODULE Xerox Versant180 097S04746",
+    "xmlId": "302db18f-a9df-11e9-a226-005056ada24b",
+    "vendorCode": "097S04746",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8179,
+    "name": "IP видеокамера + кронштейн на стену Hikvision DS-2DE7225IW-AE 2.0 MP PTZ",
+    "xmlId": "a7790b8e-1033-11ea-a243-005056ada24b",
+    "vendorCode": "DS-2DE7225IW-AE",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8180,
+    "name": "IP видеокамера уличная Hikvision DS-2CD2043G0-I (2.8 мм) (Акция) 4МП, EasyIP 2.0 Plus",
+    "xmlId": "897ec364-1033-11ea-a243-005056ada24b",
+    "vendorCode": "DS-2CD2043G0-I",
+    "prices": null,
+    "rests": 2
+  },
+  {
+    "id": 8181,
+    "name": "IP видеокамера уличная Hikvision DS-2CD2622FWD-IS (2.8-12 мм) 2МП",
+    "xmlId": "4bdede12-1033-11ea-a243-005056ada24b",
+    "vendorCode": "DS-2CD2622FWD-IS",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8182,
+    "name": "IP телефон Cisco CP-7841-K9 4 линии SIP, 2x GE PoE, LCD",
+    "xmlId": "5fb14de5-f46a-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "CP-7841-K9",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8183,
+    "name": "IP телефон Cisco CP-7937-MIC-KIT Microphone Kit for 7937",
+    "xmlId": "5f9e1840-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "CP-7937-MIC-KIT",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8184,
+    "name": "IP телефон Cisco SMB SPA303-G2",
+    "xmlId": "3c5e7943-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "SPA303-G2",
+    "prices": [
+      {
+        "id": 3,
+        "price": 32510,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 42263,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": null
+  },
+  {
+    "id": 8185,
+    "name": "IP-телефон Cisco CP-7906G Wired",
+    "xmlId": "5f9e183f-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "CP-7906G",
+    "prices": null,
+    "rests": 2
+  },
+  {
+    "id": 8186,
+    "name": "IP-телефон Cisco UC Phone 7821 CP-7821-K9",
+    "xmlId": "6bb4ad45-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "CP-7821-K9",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8187,
+    "name": "IVTДиск отрезной CW-115-10",
+    "xmlId": "fa97d989-8ea6-11e9-a219-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8188,
+    "name": "Ka6eль PROCAB CAB711\/1.5 (mJack-2RCA) (1.5 м)",
+    "xmlId": "2bed7a48-5d61-41b0-9ff0-580bb86fb6bb",
+    "vendorCode": "CLA711\/1.5",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8189,
+    "name": "Kaspersky Endpoint Security for Business  - Select Band R: 100-149 Renewal",
+    "xmlId": "10f8e68c-f46a-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "KL48632ARFR",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8190,
+    "name": "Katimex 102028 - УЗК Cable-Max (80м; 4,5мм)",
+    "xmlId": "c457e347-29d4-11e9-a20d-000c2935d274",
+    "vendorCode": "KM-102028",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8191,
+    "name": "Katimex 103014 - УЗК Pipe Eel (стеклопруток 9 мм; 150м)",
+    "xmlId": "d82a9334-29d4-11e9-a20d-000c2935d274",
+    "vendorCode": "KM-103014",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8192,
+    "name": "LCD панель LG EAJ63892201 LCD PANEL",
+    "xmlId": "0136541f-2538-4375-8b59-ab42c1e99d8d",
+    "vendorCode": "EAJ63892201",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8193,
+    "name": "LCD панель Samsung BN07-01326A LCD PANEL",
+    "xmlId": "072ee83d-b83c-11e9-a22c-005056ada24b",
+    "vendorCode": "BN07-01326A",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8194,
+    "name": "LCD панель Samsung BN07-01326D LCD PANEL",
+    "xmlId": "60743ecb-9e54-11e9-a225-005056ada24b",
+    "vendorCode": "BN07-01326D",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8195,
+    "name": "LCD панель Samsung BN95-02641A Lcd\/Led Display Panel",
+    "xmlId": "b20a7d77-db5e-11e9-a231-005056ada24b",
+    "vendorCode": "BN95-02641A",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8196,
+    "name": "LED подстветка AGF79082601 Panel LGP-LED",
+    "xmlId": "40ee76cc-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "AGF79082601",
+    "prices": null,
+    "rests": 3
+  },
+  {
+    "id": 8197,
+    "name": "LSI Logic LSICVM02 CacheVault модуль (LSI00418)",
+    "xmlId": "3f3d4721-668c-11e9-a210-000c2935d274",
+    "vendorCode": "155305",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8198,
+    "name": "MCVESGRTPT MACH2 CORPORATE WORKING JACKET, Size XS, Light Grey-Dark Grey \/ Куртка серия Корпоратив (",
+    "xmlId": "9c0c9f53-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "MCVESGRTPT",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8199,
+    "name": "NORDLGRPT PU-COATED POLYESTER OXFORD COLD STORAGE PARKA,  Size S, Grey \/ Куртка Парка с ПУ-покрытие ",
+    "xmlId": "9c0c9f4f-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "NORDLGRPT",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8200,
+    "name": "Online ИБП CyberPower OLS3000ERT2U, 3000VA\/2700W",
+    "xmlId": "5eef4ff6-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "OLS3000ERT2U",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8201,
+    "name": "PFID CARD\"ТОЛСТАЯ\" прокси карта EM Marine",
+    "xmlId": "304a8721-c06c-4869-b40c-3c9d2d0a8070",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 80
+  },
+  {
+    "id": 8202,
+    "name": "PoE адаптер Ubiquiti POE-24 12В 0.5A POE-24-12W",
+    "xmlId": "79cc67d9-6016-11e9-a210-000c2935d274",
+    "vendorCode": "POE-24-12W",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8203,
+    "name": "PoE адаптер Ubiquiti POE-24 24В 0.5A Gigabit POE-24-12W-G",
+    "xmlId": "1c8bedd4-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "POE-24-12W-G",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8204,
+    "name": "PoE адаптер Ubiquiti POE-48 24В 0.5A",
+    "xmlId": "fd5e63c7-251a-11e9-a20d-000c2935d274",
+    "vendorCode": "POE-48-EU",
+    "prices": [
+      {
+        "id": 3,
+        "price": 6070,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 7891,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": null
+  },
+  {
+    "id": 8205,
+    "name": "PoE адаптер Ubiquiti POE-48 24В 0.5A Gigabit POE48-24W-G",
+    "xmlId": "dc7c5bd7-10fc-11ea-a243-005056ada24b",
+    "vendorCode": "POE48-24W-G",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8206,
+    "name": "POS Терминал ADVANPOS ZL-1532 FANLESS",
+    "xmlId": "57366a28-1d4e-4429-950a-9d86bd5dd8b7",
+    "vendorCode": "ZL-1532",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8207,
+    "name": "Power cord eu kit Xerox Versant V180 497K18760",
+    "xmlId": "a87b8d01-a9dd-11e9-a226-005056ada24b",
+    "vendorCode": "497K18760",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8208,
+    "name": "PR FIN TOP TRAY EXTE Xerox Versant180 497K18371",
+    "xmlId": "58d3b504-a9de-11e9-a226-005056ada24b",
+    "vendorCode": "497K18371",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8209,
+    "name": "PR PUNCH 2\/4 Xerox Versant180 497K16720",
+    "xmlId": "6582fe10-a9de-11e9-a226-005056ada24b",
+    "vendorCode": "497K16720",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8210,
+    "name": "PROCAST Cable BMC 6\/60\/0.08 Балансный микрофонный кабель, 6mm, XLPE Insulation, [(60\/0.08)Голубой XL",
+    "xmlId": "a7109b93-4fb1-11e9-a20e-000c2935d274",
+    "vendorCode": "6\/60\/0.08",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8211,
+    "name": "PROCAST Cable SJB 14.OFC.2,077 Профессиональный инсталляционный круглый всепогодный спикерный кабель",
+    "xmlId": "c2e1eaf4-4fb3-11e9-a20e-000c2935d274",
+    "vendorCode": "14AWG",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8212,
+    "name": "PROCAST M-SP4NC кабельный разъем",
+    "xmlId": "a0a37431-4fb3-11e9-a20e-000c2935d274",
+    "vendorCode": "M-SP4NC",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8213,
+    "name": "PROCAST TR-6.3\/6\/M\/M TR Jack 6,3mm (male) разъем - штекер под пайку на кабель 6мм, MONO, металлическ",
+    "xmlId": "3fdc9676-4fb2-11e9-a20e-000c2935d274",
+    "vendorCode": "TR-6.3\/6\/M\/M",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8214,
+    "name": "PROCAST XLR 6\/Female XLR (female) балансный разъем - гнездо под пайку,3 контакта, на кабель 6мм, мет",
+    "xmlId": "8d8bfa6b-4fb3-11e9-a20e-000c2935d274",
+    "vendorCode": "XLR 6\/Female XLR (female)",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8215,
+    "name": "PROCAST XLR 6\/male XLR(male) балансный разъем - штекер под пайку, 3 контакта, на кабель 6мм, металли",
+    "xmlId": "69628a8e-4fb3-11e9-a20e-000c2935d274",
+    "vendorCode": "XLR 6\/male XLR(male)",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8216,
+    "name": "PRODUCTION READY BOOKLETMAKER Xerox Versant180 097S04750",
+    "xmlId": "31116dae-a9de-11e9-a226-005056ada24b",
+    "vendorCode": "097S04750",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8217,
+    "name": "Q7404-60029 ASSY-HINGE-HR",
+    "xmlId": "9d0e42f4-b29a-11e9-a22c-005056ada24b",
+    "vendorCode": "Q7404-60029",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8218,
+    "name": "RFID CARD\"ТОНКАЯ\" прокси карта EM Marine",
+    "xmlId": "900b7e73-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "",
+    "prices": [
+      {
+        "id": 3,
+        "price": 70,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 91,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": 45
+  },
+  {
+    "id": 8219,
+    "name": "RITTAL 5502.020 Панель вентиляторная TS IT\/в комплекте 2 вент-ра\/6 вент. максимум",
+    "xmlId": "b61e548a-292b-11e9-a20d-000c2935d274",
+    "vendorCode": "5502.020",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8220,
+    "name": "RITTAL 5503.120 Шкаф TS IT 800x1200x800\/24U\/дверь стекло\/сталь",
+    "xmlId": "85593247-2932-11e9-a20d-000c2935d274",
+    "vendorCode": "5503.120",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8221,
+    "name": "RITTAL 7824.128 Стенки боковые на замках для TS, TS-IT\/1200x800\/2 шт ",
+    "xmlId": "8dc17f9a-292b-11e9-a20d-000c2935d274",
+    "vendorCode": "7824.128",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8222,
+    "name": "RITTAL 8620.034 Панели цоколя боковые, 100 мм для системы цоколей VX, листовая сталь, 2 шт",
+    "xmlId": "676b5c23-292c-11e9-a20d-000c2935d274",
+    "vendorCode": "8620.034",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8223,
+    "name": "RITTAL DK 7257.035 Распределительная панель со стальными органайзерами",
+    "xmlId": "3865c4c0-4092-11e9-a20e-000c2935d274",
+    "vendorCode": "7257.035",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8224,
+    "name": "RITTAL VX Угловой элемент цоколя с панелью цоколя, передней и задней, В: 100 мм, для Ш: 800 ",
+    "xmlId": "5264c064-f46a-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "8620.003",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8225,
+    "name": "RITTAL Шкаф настенный 7507.120 FlatBox 12U 600x600",
+    "xmlId": "585898a8-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "7507.120",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8226,
+    "name": "SHURE BLX288E\/PG58-H8E, микрофонная радиосистема в комплекте",
+    "xmlId": "4000fe2f-4fb1-11e9-a20e-000c2935d274",
+    "vendorCode": "BLX288E\/PG58-H8E",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8227,
+    "name": "Sia абразив 150 Т6021",
+    "xmlId": "526a73f9-7caf-11e9-a217-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8228,
+    "name": "SIP-телефон Yealink SIP-T40G,3 аккаунта,BLF,PoE,с блоком питания",
+    "xmlId": "3710aea0-6274-11e9-a210-000c2935d274",
+    "vendorCode": "SIP-T40G",
+    "prices": null,
+    "rests": 10
+  },
+  {
+    "id": 8229,
+    "name": "Slim кейс для диска (черный)",
+    "xmlId": "eaa9aa70-f01a-4765-8b4e-2bedae6f8ef7",
+    "vendorCode": "00000000301",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8230,
+    "name": "SP 650 Колодки",
+    "xmlId": "63289e15-9811-11e9-a224-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8231,
+    "name": "SQUARE FOLD TRIMMER Xerox Versant180 097S04752",
+    "xmlId": "6ba73356-a9df-11e9-a226-005056ada24b",
+    "vendorCode": "097S04752",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8232,
+    "name": "ST6000NM0095 Жесткий диск 6Tb Enterprise ",
+    "xmlId": "b01ba1ed-1fbb-11e9-a20d-000c2935d274",
+    "vendorCode": "ST6000NM0095",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8233,
+    "name": "Subscription only for VMware vSphere 6 Essentials Kit for 1 year",
+    "xmlId": "83f28752-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "VS6-ESSL-SUB-C",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8234,
+    "name": "Tytan шпаклевка гипсовая Gladz (25 кг)",
+    "xmlId": "9b31a53a-34d0-11e9-a20d-000c2935d274",
+    "vendorCode": "",
+    "prices": [
+      {
+        "id": 3,
+        "price": 1850,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 2405,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": null
+  },
+  {
+    "id": 8235,
+    "name": "USB Flash накопитель Transcend 8Gb JetFlash 720S USB3.1 (TS8GJF720S)",
+    "xmlId": "58eaa209-668d-11e9-a210-000c2935d274",
+    "vendorCode": "TS8GJF720S",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8236,
+    "name": "USB модем Huawei E3372 3G\/4G",
+    "xmlId": "b1285024-ec0a-11e9-a233-005056ada24b",
+    "vendorCode": "E3372",
+    "prices": null,
+    "rests": 10
+  },
+  {
+    "id": 8237,
+    "name": "USB Флеш 16GB 2.0 Transcend TS16GJF330 белый",
+    "xmlId": "3051335f-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "TS16GJF330",
+    "prices": [
+      {
+        "id": 3,
+        "price": 2990,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 3887,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": null
+  },
+  {
+    "id": 8238,
+    "name": "USB Флеш 64GB 3.0 Kingston DT50\/64GB металл",
+    "xmlId": "0f210dd8-2098-11e9-a20d-000c2935d274",
+    "vendorCode": "DT50 64 Gb",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8239,
+    "name": "USB Флеш 64GB 3.0 Transcend TS64GJF730 белый",
+    "xmlId": "43010825-218b-11ea-a244-005056ada24b",
+    "vendorCode": "TS64GJF730",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8240,
+    "name": "USB Флеш Kingston DataTraveler® 50 (DT50) 32GB",
+    "xmlId": "6bb4ad3a-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "DT50 32 Gb",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8241,
+    "name": "USB Флеш Kingston DataTraveler® DTSE9H\/32GB 32GB",
+    "xmlId": "746cbaa3-7a76-4977-ba0e-5de8244bf2c0",
+    "vendorCode": "DTSE9H\/32GB",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8242,
+    "name": "USB Флеш Kingston, SE9 G2, 16GB, серебристый flash DTSE9G2\/16GB USB 3.0, silver",
+    "xmlId": "9df9f26e-9886-4954-be6e-f56160140d2e",
+    "vendorCode": "DTSE9G2\/16GB",
+    "prices": null,
+    "rests": 4
+  },
+  {
+    "id": 8243,
+    "name": "USB Флеш Kingston, SE9 G2, 32GB, серебристый flash DTSE9G2\/32GB USB 3.0, silver",
+    "xmlId": "4e74f506-72ec-472a-93dc-973a94f1e3a4",
+    "vendorCode": "DTSE9G2\/32GB",
+    "prices": [
+      {
+        "id": 3,
+        "price": 3186,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 4142,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": null
+  },
+  {
+    "id": 8244,
+    "name": "USB Флешка DT100G3\/32GB 32Gb Kingston DataTraveler 100 G3, Black",
+    "xmlId": "24ffca00-cece-11e9-a22f-005056ada24b",
+    "vendorCode": "DT100G3\/32GB",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8245,
+    "name": "USB-кабель SCB и ICB HP RK2-4801-000CN USB Cable-ICB to SCB",
+    "xmlId": "8a5e2ecf-be77-11e9-a22e-005056ada24b",
+    "vendorCode": "RK2-4801-000CN",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8246,
+    "name": "Webasto 9015857А отопитель ТТ-Е (д)",
+    "xmlId": "a817d1eb-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "9015857А",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8247,
+    "name": "WebSmart коммутатор D-Link DGS-1210-20\/F1A 16 портов 10\/100\/1000  + 4SFP",
+    "xmlId": "eddeca11-f467-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "DGS-1210-20\/F1A",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8248,
+    "name": "Wi-Fi модуль Epson ELPAP10",
+    "xmlId": "9cd65075-5144-11e9-a20e-000c2935d274",
+    "vendorCode": "ELPAP10",
+    "prices": [
+      {
+        "id": 3,
+        "price": 30780,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 40014,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": null
+  },
+  {
+    "id": 8249,
+    "name": "WWW. Интернет-банкинг. Выдача справок через СИБ (Срочная).",
+    "xmlId": "c4709acf-5b8c-11e9-a210-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8250,
+    "name": "WWW. Интернет-банкинг. Выдача справок через СИБ.",
+    "xmlId": "52b5a784-5b8c-11e9-a210-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8251,
+    "name": "WWW.Интернет-Банкинг.Комиссия за повторный выпуск ЭЦП 1 год",
+    "xmlId": "99acb36b-5b8c-11e9-a210-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8252,
+    "name": "WWW.Интернет-Банкинг.Комиссия за повторный выпуск ЭЦП 3 года",
+    "xmlId": "79b19276-5b8c-11e9-a210-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8253,
+    "name": "XEROX 013R00669 Модуль ксерографии Xerox WC 5945\/5955 (200 000 стр.)",
+    "xmlId": "1ee77233-4fa1-11e9-a20e-000c2935d274",
+    "vendorCode": "013R00669",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8254,
+    "name": "XEROX CREASE AND TWO SIDED TRIMMER\/BUFFER MODULE Versant180 450S03153",
+    "xmlId": "22b15436-a9e0-11e9-a226-005056ada24b",
+    "vendorCode": "450S03153",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8255,
+    "name": "XEROX CREASE AND TWO SIDED TRIMMER\/BUFFER MODULE Versant180 450S03153 (сборка)",
+    "xmlId": "3fd225a4-ad43-11e9-a22a-005056ada24b",
+    "vendorCode": "450S03153",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8256,
+    "name": "Xerox Versant 180EF 497K18720",
+    "xmlId": "e473f802-a9dd-11e9-a226-005056ada24b",
+    "vendorCode": "497K18720",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8257,
+    "name": "Xerox XV180 DMO Nationalization Kit Versant 180PR 497K20200",
+    "xmlId": "707e4dcd-a9dd-11e9-a226-005056ada24b",
+    "vendorCode": "497K20200",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8258,
+    "name": "ZyXEL Keenetic Omni II Интернет-центр для выделенной линии Ethernet, с точкой доступа 300Мб",
+    "xmlId": "28940f55-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "Omni II",
+    "prices": null,
+    "rests": 2
+  },
+  {
+    "id": 8259,
+    "name": "Абоненсткая плата",
+    "xmlId": "445f2d21-65d1-11e9-a210-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8260,
+    "name": "Абоненсткая плата за городской телефонный номер ",
+    "xmlId": "f3a3b79a-65ce-11e9-a210-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8261,
+    "name": "Абоненсткая плата за доступ к Интернет",
+    "xmlId": "7fde7c89-2467-11e9-a20d-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8262,
+    "name": "Абоненсткая плата за одноканальный телефонный номер",
+    "xmlId": "8f7f10b1-2467-11e9-a20d-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8263,
+    "name": "Абоненсткая плата за услуги ОФД",
+    "xmlId": "97b36680-65cb-11e9-a210-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8264,
+    "name": "Абонентская плата за услуги ОФД",
+    "xmlId": "3c481c88-3356-11e9-a20d-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8265,
+    "name": "Абонентская услуга по обслуживанию оргтехники",
+    "xmlId": "42b25fdd-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8266,
+    "name": "Абонентский терминал FleetGuide-4",
+    "xmlId": "02dfc340-8907-11e9-a217-000c2935d274",
+    "vendorCode": "Абонентский терминал FleetGuide-4",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8267,
+    "name": "Абонентское обслуживание навигационного оборудования (половина Июня 2019)",
+    "xmlId": "c96f51c7-ad36-11e9-a22a-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8268,
+    "name": "Авиабилет",
+    "xmlId": "0c706334-245d-11e9-a20d-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8269,
+    "name": "Автодиски Lexus, R17, 5*114.3",
+    "xmlId": "80328a63-fed0-11e9-a240-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 4
+  },
+  {
+    "id": 8270,
+    "name": "Автокамера 185-15",
+    "xmlId": "a817d211-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "185-15",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8271,
+    "name": "Автолампа Н1 12-55 P14.5s Wait 5000K (053_ЭЛК)",
+    "xmlId": "6e5351da-d3bd-11e9-a22f-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 2
+  },
+  {
+    "id": 8272,
+    "name": "Автомасла",
+    "xmlId": "e92772e0-10fc-11ea-a243-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8273,
+    "name": "Автомат ВА47-063, 1P, 25A, Icu-4,5kA, х-ка  С",
+    "xmlId": "77d0069a-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "7000108",
+    "prices": null,
+    "rests": 10
+  },
+  {
+    "id": 8274,
+    "name": "Автомобильная шина Kumho WinterCraft Ice WI31 195\/65 R15 91T зимняя шипованная",
+    "xmlId": "fe3ea348-17e0-11ea-a243-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 4
+  },
+  {
+    "id": 8275,
+    "name": "Автоподатчик в сборе HP B5L47-67906 for Hp Laserjet M527\/M577",
+    "xmlId": "f7444846-be75-11e9-a22e-005056ada24b",
+    "vendorCode": "B5L47-67906",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8276,
+    "name": "Автоподатчик в сборе HP B5L47-67907 ADF whole unit assembly ",
+    "xmlId": "aa54210e-93f0-11e9-a21d-000c2935d274",
+    "vendorCode": "B5L47-67907",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8277,
+    "name": "Автоподатчик в сборе HP CF066-67910 ADF whole unit assembly for LJ M725\/ CLJ M775",
+    "xmlId": "42b25fdc-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "CF066-67910",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8278,
+    "name": "Автоподатчик в сборе HP CF116-67910 ADF whole unit assembly for HP LJ Enterprise 500 M525dn\/M525f",
+    "xmlId": "d6228841-17e3-11ea-a243-005056ada24b",
+    "vendorCode": "CF116-67910",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8279,
+    "name": "Автоподатчик в сборе HP CF367-67920 LJ Ent Flow MFP M830\/M880",
+    "xmlId": "e268956a-f977-11e9-a239-005056ada24b",
+    "vendorCode": "CF367-67920",
+    "prices": null,
+    "rests": 3
+  },
+  {
+    "id": 8280,
+    "name": "Автоподатчик в сборе HP Q3938-67998 CLJ CM6030\/CM6040\/CM6049",
+    "xmlId": "8f8fae0d-cfd2-11e9-a22f-005056ada24b",
+    "vendorCode": "Q3938-67998",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8281,
+    "name": "Автополотенце НАНО 3в1",
+    "xmlId": "79a34cdb-7d25-11e9-a217-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 3
+  },
+  {
+    "id": 8282,
+    "name": "Автостекло AGC Automatic  (Toyota Hilux)",
+    "xmlId": "7c09db5a-bf47-11e9-a22e-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8283,
+    "name": "Автошина Yokohama 225\/60 R17 G91F 99W",
+    "xmlId": "9cdd6e68-46fe-11e9-a20e-000c2935d274",
+    "vendorCode": "",
+    "prices": [
+      {
+        "id": 3,
+        "price": 32200,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 41860,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": null
+  },
+  {
+    "id": 8284,
+    "name": "Автошина Yokohama Advan Fleva V701 215\/55R17 94W",
+    "xmlId": "92decc69-46e7-11e9-a20e-000c2935d274",
+    "vendorCode": "215\/55\/R17\/94 W_YKH\\AFV70 1",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8285,
+    "name": "Автошины 185\/75 R16C Кама -301 б\/к НК",
+    "xmlId": "ae107195-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 2
+  },
+  {
+    "id": 8286,
+    "name": "Адаптер FC 16Gb QW971A HPE StoreFabric SN1000Q 16GB 1-port PCIe Fibre Channel Host Bus Adapter (PCIe",
+    "xmlId": "bb23aaa5-0774-11ea-a240-005056ada24b",
+    "vendorCode": "QW971A",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8287,
+    "name": "Адаптер HDMI (M) - VGA (F)+ 3.5mm +Питание",
+    "xmlId": "e860221c-9417-11e9-a21d-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8288,
+    "name": "Адаптер SHIP S908-3 2SC\/2SC Duplex SM, Одномодовый",
+    "xmlId": "71d56c8c-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "S908-3",
+    "prices": null,
+    "rests": 36
+  },
+  {
+    "id": 8289,
+    "name": "Адаптер USB Bluetooth Deluxe DLB-4",
+    "xmlId": "944fc422-2e63-45e3-97a4-5695b6260424",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8290,
+    "name": "Адаптер беспроводной передачи контента Yealink WPP20 ",
+    "xmlId": "3c5e792a-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "WPP20",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8291,
+    "name": "Адаптер д\/биметаллической коронки SDS-plus 32-210 mm (AS6)",
+    "xmlId": "a215884b-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 2
+  },
+  {
+    "id": 8292,
+    "name": "Адаптер для информационных разъемов DKC 76607B AMP\/BICC белый",
+    "xmlId": "1d2e17d4-13e5-4774-8a8c-59a9d46d1ce2",
+    "vendorCode": "76607B",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8293,
+    "name": "Адаптер для подключения неоконцованного волокна с FC\/UPC коннектором",
+    "xmlId": "5e3eb410-30dd-11e9-a20d-000c2935d274",
+    "vendorCode": "GRW-BFA-FCUPC",
+    "prices": [
+      {
+        "id": 3,
+        "price": 2828.98,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 3678,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": 1
+  },
+  {
+    "id": 8294,
+    "name": "Адаптер питания LG EAY63189101 AC Power Adapter",
+    "xmlId": "9d05031e-009f-4b91-88fc-e75c5134182c",
+    "vendorCode": "EAY63189101",
+    "prices": null,
+    "rests": 3
+  },
+  {
+    "id": 8295,
+    "name": "Адаптер питания LG EAY64569201  AC Power Adapter",
+    "xmlId": "b23157f3-c23a-11e9-a22e-005056ada24b",
+    "vendorCode": "EAY64569201",
+    "prices": null,
+    "rests": 6
+  },
+  {
+    "id": 8296,
+    "name": "Адаптер питания Samsung BN44-00835A 19V 2.5A AC Power Adapter",
+    "xmlId": "0e06ea45-4a07-4db3-b748-b8106eadc694",
+    "vendorCode": "BN44-00835A",
+    "prices": null,
+    "rests": 11
+  },
+  {
+    "id": 8297,
+    "name": "Адресат",
+    "xmlId": "b619d5c3-4557-11e9-a20e-000c2935d274",
+    "vendorCode": "",
+    "prices": [
+      {
+        "id": 3,
+        "price": 50,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 65,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": 99
+  },
+  {
+    "id": 8298,
+    "name": "Аккумулятор Lenovo 42T4534 ThinkPad Battery",
+    "xmlId": "5f9e1841-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "42T4534",
+    "prices": null,
+    "rests": 3
+  },
+  {
+    "id": 8299,
+    "name": "Аккумулятор Lenovo 43R9255 ThinkPad Battery",
+    "xmlId": "5f9e182f-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "43R9255",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8300,
+    "name": "Аккумулятор Mitlu 70-SD-E",
+    "xmlId": "d5c87ac1-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "70-SD-E",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8301,
+    "name": "Аккумулятор Mitlu 75 AMP M6-GD",
+    "xmlId": "87e1ee41-6b48-11e9-a210-000c2935d274",
+    "vendorCode": "M6-GD",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8302,
+    "name": "Аккумулятор Mutlu 90 AMP M6-GD",
+    "xmlId": "89cf24a6-fecd-11e9-a240-005056ada24b",
+    "vendorCode": "M6-GD",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8303,
+    "name": "Аккумулятор PowerPlant HSTNN-LB5Y для ноутбуков HP CQ14 OA04 14.8V 2600mAh Li-ion",
+    "xmlId": "b85ce842-10f2-11ea-a243-005056ada24b",
+    "vendorCode": "HSTNN-LB5Y",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8304,
+    "name": "Аккумуляторная ударная дрель-шуруповёрт Bosch GSB 180-LI Professional",
+    "xmlId": "6852e294-253a-11e9-a20d-000c2935d274",
+    "vendorCode": "180-LI",
+    "prices": [
+      {
+        "id": 3,
+        "price": 53100,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 69030,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": 1
+  },
+  {
+    "id": 8305,
+    "name": "Аксессуар для видеокамер Adaptec Yblntek тестер IP-Камер X9-MOVTADHS",
+    "xmlId": "5122dd11-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "X9-MOVTADHS",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8306,
+    "name": "Активный микшер со встроенным DSP YAMAHA EMX7",
+    "xmlId": "22df5b71-4fb1-11e9-a20e-000c2935d274",
+    "vendorCode": "EMX7",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8307,
+    "name": "Акустическая система Microlab B-73 (2.0) - wood",
+    "xmlId": "1313232c-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "B-73",
+    "prices": [
+      {
+        "id": 3,
+        "price": 11466,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 14906,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": null
+  },
+  {
+    "id": 8308,
+    "name": "Акустическая система Yamaha CBR15",
+    "xmlId": "e92d8501-4fb0-11e9-a20e-000c2935d274",
+    "vendorCode": "CBR15",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8309,
+    "name": "Амортизатор (газомасляный передний L) (TOKICO)",
+    "xmlId": "7cf66722-ac46-11e9-a227-005056ada24b",
+    "vendorCode": "U3768",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8310,
+    "name": "Амортизатор задний",
+    "xmlId": "9c146c2c-f947-11e9-a239-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 2
+  },
+  {
+    "id": 8311,
+    "name": "Амортизатор передний ",
+    "xmlId": "2d44a28b-d864-11e9-a230-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8312,
+    "name": "Анализатор Fluke DTX-1200",
+    "xmlId": "de2d1d5d-38bf-11e9-a20d-000c2935d274",
+    "vendorCode": "DTX-1200",
+    "prices": [
+      {
+        "id": 3,
+        "price": 1500000,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 1950000,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": 1
+  },
+  {
+    "id": 8313,
+    "name": "Анимационное видео для бизнеса",
+    "xmlId": "789c3994-98a2-11e9-a224-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8314,
+    "name": "Анкер для пустотелых конструкций М6х52 (уп.40шт) ДКС",
+    "xmlId": "58589899-f468-11e8-9c18-2c4d54f08a78",
+    "vendorCode": "CM560652",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8315,
+    "name": "Антенна D-Link ANT70-1000 2,4\/5ГГц 10dBi для внешнего использования",
+    "xmlId": "3ce0eb06-515b-4961-b538-530a297ff300",
+    "vendorCode": "ANT70-1000",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8316,
+    "name": "Антенна UBNT AirMax Omni 2G10",
+    "xmlId": "b5889941-fc6d-11e9-a23b-005056ada24b",
+    "vendorCode": "2G10",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8317,
+    "name": "Антивирус Dr. Web Security Space PRO 24 месяца на 2 ПК box",
+    "xmlId": "34d82291-361b-4710-92e7-f72f62894119",
+    "vendorCode": "BFW-W24-0002-2",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8318,
+    "name": "Антивирус Dr. Web Security Space PRO GOLD, 36 мес., 1ПК, BOX",
+    "xmlId": "69d8ee9f-ae25-4044-8d08-ac21c852c037",
+    "vendorCode": "BFW-W36-0001-1",
+    "prices": null,
+    "rests": 6
+  },
+  {
+    "id": 8319,
+    "name": "Антивирус ESET NOD32 Antivirus Business Edition newsale for 11 users",
+    "xmlId": "7c3bb8c6-6816-11e9-a210-000c2935d274",
+    "vendorCode": "NOD32-NBE-NS-1-11 KZ",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8320,
+    "name": "Антивирус ESET NOD32 Smart Security Business Edition newsale for 75 user",
+    "xmlId": "77d006a0-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "NOD32-SBE-NS-1-75",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8321,
+    "name": "Антивирус Kaspersky Anti-Virus 2012 KL1143LBB Card 2Dt Renewal Card (продление)",
+    "xmlId": "bb53f8ec-a6fc-41f5-8a14-17555a81bbc8",
+    "vendorCode": "KL1143LBB",
+    "prices": null,
+    "rests": 4
+  },
+  {
+    "id": 8322,
+    "name": "Антивирус Kaspersky Anti-Virus 2013 KL1149LBBFS Dt Base Box",
+    "xmlId": "b5f8b662-e383-4382-bc0c-e574d3005a56",
+    "vendorCode": "KL1149LBBFS",
+    "prices": null,
+    "rests": 4
+  },
+  {
+    "id": 8323,
+    "name": "Антигравий 950 спрей 400 мл",
+    "xmlId": "33ee9933-7cab-11e9-a217-000c2935d274",
+    "vendorCode": "",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8324,
+    "name": "Антифриз \"CARTEK\" красный G12-10 кг",
+    "xmlId": "e2a54ed6-fc69-11e9-a23b-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8325,
+    "name": "Антифриз Sibiria красный -40 10 кг",
+    "xmlId": "9f791dfe-2ac7-11e9-a20d-000c2935d274",
+    "vendorCode": "",
+    "prices": [
+      {
+        "id": 3,
+        "price": 4000,
+        "currency": "KZT",
+        "name": "Приходная"
+      },
+      {
+        "id": 4,
+        "price": 5200,
+        "currency": "KZT",
+        "name": "Розничная"
+      }
+    ],
+    "rests": 2
+  },
+  {
+    "id": 8326,
+    "name": "Антифриз Sintoil Sibiria желтый 5 кг",
+    "xmlId": "88c3f8ad-cfa7-11e9-a22f-005056ada24b",
+    "vendorCode": "",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8327,
+    "name": "Аптечка АМD-39",
+    "xmlId": "a817d1e1-18a5-11e9-a20a-000c2935d274",
+    "vendorCode": "АМD-39",
+    "prices": null,
+    "rests": 1
+  },
+  {
+    "id": 8328,
+    "name": "Аренда автотранспорта (Hyundai Ix35 г\/н 515DAA06)",
+    "xmlId": "5cc16972-34ec-11e9-a20d-000c2935d274",
+    "vendorCode": "515DAA06",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8329,
+    "name": "Аренда автотранспорта (Lada Ks0y5I 02d-42 561FKA06)",
+    "xmlId": "3c481c8a-3356-11e9-a20d-000c2935d274",
+    "vendorCode": "561FKA06",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8330,
+    "name": "Аренда автотранспорта (Lexus ES250  г\/н 101WWW06)",
+    "xmlId": "3c481c8d-3356-11e9-a20d-000c2935d274",
+    "vendorCode": "101WWW06",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8331,
+    "name": "Аренда автотранспорта (Toyota Hilux г\/н 134DAZ06)",
+    "xmlId": "3c481c8b-3356-11e9-a20d-000c2935d274",
+    "vendorCode": "134DAZ06",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8332,
+    "name": "Аренда автотранспорта (Toyota Hilux г\/н 150DAZ06)",
+    "xmlId": "633d073a-34ed-11e9-a20d-000c2935d274",
+    "vendorCode": "150DAZ06",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8333,
+    "name": "Аренда автотранспорта (Газ 33021\/212 г\/н 780HWA06)",
+    "xmlId": "3c481c8c-3356-11e9-a20d-000c2935d274",
+    "vendorCode": "780HWA06",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8334,
+    "name": "Аренда автотранспорта (ГАЗ А32r23\/gaz А32r23 г\/н 771FEA06)",
+    "xmlId": "46380e40-34ed-11e9-a20d-000c2935d274",
+    "vendorCode": "771FEA06",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8335,
+    "name": "Аренда автотранспорта (ГАЗ А32r23\/gaz А32r23 г\/н 791FEA06)",
+    "xmlId": "3c481c89-3356-11e9-a20d-000c2935d274",
+    "vendorCode": "791FEA06",
+    "prices": null,
+    "rests": null
+  },
+  {
+    "id": 8336,
+    "name": "Аренда аудио-видео оборудование",
+    "xmlId": "13132308-f468-11e8-9c18-2c4d,
