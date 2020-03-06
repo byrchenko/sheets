@@ -173,33 +173,38 @@ class App extends React.Component {
              * Apply changes
              */
             changes.forEach(({cell, row, col, value}) => {
+                /**
+                 * Input validation
+                 */
+                if (cell.label === "supplierQuantity") {
+                    const price = grid[row].find(item => {
+                        return item.label === "convertedPrice"
+                    });
+
+                    if (!price.value) {
+                        return null;
+                    }
+                }
+
+                /**
+                 * Change cell value
+                 */
                 grid[row][col] = {...grid[row][col], value};
 
-                /**
-                 * Sale amount
-                 */
-                if (["supplierQuantity", "take"].includes(cell.label)) {
-                    const Calc = new CalculationsService(grid);
-
-                    const newValue = Calc.calcSaleAmount(row);
-
-                    grid[row].forEach(item => {
-                        return item.label === "quantityForSale" ? item.value = newValue : null
-                    })
-                }
+                const Calc = new CalculationsService(grid);
 
                 /**
-                 * Prime cost
+                 * Recalculate values after changes
                  */
-                if(["take", "quantityForSale", "addExpenses", "supplierSum"].includes(cell.label)) {
-                    const Calc = new CalculationsService(grid);
+                grid[row].forEach(item => {
+                    if (item.label === "quantityForSale") {
+                        return item.value = Calc.calcSaleAmount(row)
+                    }
 
-                    const newValue = Calc.calcPrimeCost(row);
-
-                    grid[row].forEach(item => {
-                        return item.label === "ownPrice" ? item.value = newValue : null
-                    })
-                }
+                    if (item.label === "ownPrice") {
+                        return item.value = Calc.calcPrimeCost(row)
+                    }
+                });
             });
 
             this.setState({

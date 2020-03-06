@@ -41,7 +41,7 @@ export default class CalculationsService {
      * Quantity to be taken from stock
      *
      * @param row {Array} - Destination row array
-     * @returns {Array}
+     * @returns {number}
      */
     getStoreAmount(row) {
         const amount = row.find(item => {
@@ -174,11 +174,15 @@ export default class CalculationsService {
         const saleAmount = this.calcSaleAmount(rowIndex);
         const stockSum = this.calcStockSum(row);
 
-        const allSuppliersSum = suppliersSum.reduce((acc, next) => {
-            return next.value ? acc + Number(next.value) : acc
-        }, 0);
+        console.log(suppliersSum);
+
+        const allSuppliersSum = suppliersSum.reduce((acc, next) => acc + next, 0);
 
         const totalPrimeCost = stockSum + additionalExpenses + allSuppliersSum;
+
+        console.log(stockSum);
+        console.log(allSuppliersSum);
+        console.log(additionalExpenses);
 
         if (!totalPrimeCost || !saleAmount) {
             return 0
