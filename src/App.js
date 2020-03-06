@@ -58,6 +58,7 @@ class App extends React.Component {
             result.push({
                 className: css.headerCell,
                 value: columns[i].label,
+                code: columns[i].code,
                 readOnly: true
             })
         }
@@ -127,6 +128,10 @@ class App extends React.Component {
 
     /**
      *
+     * @param id
+     * @param item
+     * @param cls
+     * @returns {[]}
      */
     createEmptyRow(id, item, cls) {
         const row = [];
