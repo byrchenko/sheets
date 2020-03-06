@@ -10,6 +10,7 @@ import moment from "moment";
 import CalculationsService from "./_service/CalculationsService";
 import SuppliersPopup from "./SuppliersPopup";
 import suppliers from "./_mock/suppliers";
+import Select from 'react-select'
 
 class App extends React.Component {
     constructor(props) {
@@ -18,11 +19,23 @@ class App extends React.Component {
         this.HEADER_WIDTH = 19;
         this.HEADER_GROUP_COUNT = 3;
 
+        this.options = [
+            { label: 'Bread', value: 2.35 },
+            { label: 'Berries', value: 3.05 },
+            { label: 'Milk', value: 3.99 },
+            { label: 'Apples', value: 4.35 },
+            { label: 'Chicken', value: 9.95 },
+            { label: 'Yoghurt', value: 4.65 },
+            { label: 'Onions', value: 3.45 },
+            { label: 'Salad', value: 1.55 }
+        ];
+
         this.state = {
             groups: this.createHeaderGroups(),
             columns: this.createHeaderColumns(),
             rows: this.createRows(),
-            suppliersPopup: false
+            suppliersPopup: false,
+            grocery: {},
         };
 
         this.createEmptyRow = this.createEmptyRow.bind(this);
@@ -112,6 +125,26 @@ class App extends React.Component {
                         return [
                             ...item,
                             ...supplierColumns.map(item => {
+                                if(item.code === "currencyId") {
+                                    return {
+                                        className: css.cell,
+                                        value: "",
+                                        label: item.code,
+                                        supplier: name,
+                                        component: (
+                                            <Select
+                                                className={css.select}
+                                                autoFocus={true}
+                                                menuIsOpen={true}
+                                                value={{ label: 'Salad', value: 1.55 }}
+                                                // onChange={(opt) => this.setState({grocery: _.assign(this.state.grocery, {[id]: opt})})}
+                                                onChange={(opt) => console.log(opt)}
+                                                options={this.options}
+                                            />
+                                        )
+                                    }
+                                }
+
                                 return {
                                     className: css.cell,
                                     value: "",
@@ -137,6 +170,10 @@ class App extends React.Component {
         const row = [];
 
         for (let i = 0; i < cls.length; i++) {
+
+            /**
+             * Creating id cell
+             */
             if (i === 0) {
                 row.push({
                     className: css.cell,
@@ -144,7 +181,12 @@ class App extends React.Component {
                     value: id,
                     readOnly: true
                 })
-            } else if (
+            }
+
+            /**
+             * Creating read-only cells
+             */
+            else if (
                 cls[i].code === "ownPrice"
                 || cls[i].code === "retailPrice"
                 || cls[i].code === "sellingSum"
@@ -158,7 +200,27 @@ class App extends React.Component {
                     value: item ? item[cls[i].code] : "",
                     readOnly: true
                 });
-            } else {
+            }
+
+            /**
+             * Creating suppliers currency cells
+             */
+            else if (cls[i].code === "currencyId") {
+                row.push({
+                    label: cls[i].code,
+                    className: css.cell,
+                    value: item ? item[cls[i].code] : "",
+                    component: (
+                        <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                        </select>
+                    )
+                });
+            }
+
+            else {
                 row.push({
                     label: cls[i].code,
                     className: css.cell,
@@ -321,7 +383,6 @@ class App extends React.Component {
 
                         <button
                             className={css.supplier}
-                            // onClick={this.addSupplier("Ayacom")}
                             onClick={this.openSuppliersPopup()}
                         >
                             Add supplier

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 978,
+    "code": "EUR",
+    "name": "Евро",
+    "rate": 400,
+    "isBase": false
+  },
+  {
+    "id": 398,
+    "code": "KZT",
+    "name": "Тенге",
+    "rate": 1,
+    "isBase": true
+  },
+  {
+    "id": 643,
+    "code": "RUB",
+    "name": "Рубль",
+    "rate": 5.9,
+    "isBase": false
+  },
+  {
+    "id": 840,
+    "code": "USD",
+    "name": "Доллар США",
+    "rate": 339,
+    "isBase": false
+  }
+]
