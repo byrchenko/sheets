@@ -23,7 +23,9 @@ class App extends React.Component {
             columns: this.createHeaderColumns(),
             rows: this.createRows(),
             suppliersPopup: false
-        }
+        };
+
+        this.createEmptyRow = this.createEmptyRow.bind(this);
     }
 
     /**
@@ -126,36 +128,36 @@ class App extends React.Component {
     /**
      *
      */
-    createEmptyRow(id, item) {
+    createEmptyRow(id, item, cls) {
         const row = [];
 
-        for (let i = 0; i < columns.length; i++) {
+        for (let i = 0; i < cls.length; i++) {
             if (i === 0) {
                 row.push({
                     className: css.cell,
-                    label: columns[i].code,
+                    label: cls[i].code,
                     value: id,
                     readOnly: true
                 })
             } else if (
-                columns[i].code === "ownPrice"
-                || columns[i].code === "retailPrice"
-                || columns[i].code === "sellingSum"
-                || columns[i].code === "profit"
-                || columns[i].code === "rest"
-                || columns[i].code === "storePrice"
+                cls[i].code === "ownPrice"
+                || cls[i].code === "retailPrice"
+                || cls[i].code === "sellingSum"
+                || cls[i].code === "profit"
+                || cls[i].code === "rest"
+                || cls[i].code === "storePrice"
             ) {
                 row.push({
-                    label: columns[i].code,
+                    label: cls[i].code,
                     className: css.cell,
-                    value: item ? item[columns[i].code] : "",
+                    value: item ? item[cls[i].code] : "",
                     readOnly: true
                 });
             } else {
                 row.push({
-                    label: columns[i].code,
+                    label: cls[i].code,
                     className: css.cell,
-                    value: item ? item[columns[i].code] : ""
+                    value: item ? item[cls[i].code] : ""
                 });
             }
         }
@@ -174,7 +176,7 @@ class App extends React.Component {
                 return {
                     rows: [
                         ...rows,
-                        this.createEmptyRow(rows.length + 1)
+                        this.createEmptyRow(rows.length + 1, null, [...this.state.columns])
                     ]
                 }
             })
@@ -187,7 +189,7 @@ class App extends React.Component {
      */
     createRows() {
         return rows.map((el, index) => {
-            return this.createEmptyRow(index + 1, el)
+            return this.createEmptyRow(index + 1, el, columns)
         })
     }
 
