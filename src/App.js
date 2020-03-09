@@ -11,6 +11,7 @@ import CalculationsService from "./_service/CalculationsService";
 import SuppliersPopup from "./SuppliersPopup";
 import suppliers from "./_mock/suppliers";
 import Select from 'react-select'
+import {fetchTables, saveTable} from "./_service/ApiMethods";
 
 class App extends React.Component {
     constructor(props) {
@@ -20,14 +21,10 @@ class App extends React.Component {
         this.HEADER_GROUP_COUNT = 3;
 
         this.options = [
-            { label: 'Bread', value: 2.35 },
-            { label: 'Berries', value: 3.05 },
-            { label: 'Milk', value: 3.99 },
-            { label: 'Apples', value: 4.35 },
-            { label: 'Chicken', value: 9.95 },
-            { label: 'Yoghurt', value: 4.65 },
-            { label: 'Onions', value: 3.45 },
-            { label: 'Salad', value: 1.55 }
+            {label: 'KZT', value: 2.35},
+            {label: 'RUB', value: 3.05},
+            {label: 'USD', value: 3.99},
+            {label: 'EUR', value: 4.35},
         ];
 
         this.state = {
@@ -35,7 +32,7 @@ class App extends React.Component {
             columns: this.createHeaderColumns(),
             rows: this.createRows(),
             suppliersPopup: false,
-            grocery: {},
+            сurrency: {},
         };
 
         this.createEmptyRow = this.createEmptyRow.bind(this);
@@ -125,7 +122,7 @@ class App extends React.Component {
                         return [
                             ...item,
                             ...supplierColumns.map(item => {
-                                if(item.code === "currencyId") {
+                                if (item.code === "currencyId") {
                                     return {
                                         className: css.cell,
                                         value: "",
@@ -133,10 +130,51 @@ class App extends React.Component {
                                         supplier: name,
                                         component: (
                                             <Select
+                                                styles={{
+                                                    control: (provided) => ({
+                                                        ...provided,
+                                                        minHeight: 'auto',
+                                                        border: 'none',
+                                                        borderRadius: 0,
+                                                        outline: 'none',
+                                                        width: '100%'
+                                                    }),
+                                                    dropdownIndicator: (provided) => ({
+                                                       ...provided,
+                                                        padding: 0,
+                                                    }),
+                                                    input: (provided) => ({
+                                                        ...provided,
+                                                        paddingTop: 0,
+                                                        paddingBottom: 0,
+                                                        paddingLeft: 8,
+                                                        paddingRight: 8,
+                                                        marginTop: 0,
+                                                        marginBottom: 0,
+                                                        fontSize: 12,
+                                                    }),
+                                                    valueContainer: provided => ({
+                                                        ...provided,
+                                                        paddingTop: 1,
+                                                        paddingBottom: 1,
+                                                    }),
+                                                    singleValue: provided => ({
+                                                        ...provided,
+                                                        fontSize: 12,
+                                                    }),
+                                                    option: provided => ({
+                                                        ...provided,
+                                                        fontSize: 12,
+                                                    }),
+                                                    noOptionsMessage: provided => ({
+                                                        ...provided,
+                                                        fontSize: 12
+                                                    }),
+                                                }}
                                                 className={css.select}
                                                 autoFocus={true}
                                                 menuIsOpen={true}
-                                                value={{ label: 'Salad', value: 1.55 }}
+                                                value={{label: 'KZT', value: 1.55}}
                                                 // onChange={(opt) => this.setState({grocery: _.assign(this.state.grocery, {[id]: opt})})}
                                                 onChange={(opt) => console.log(opt)}
                                                 options={this.options}
@@ -218,9 +256,7 @@ class App extends React.Component {
                         </select>
                     )
                 });
-            }
-
-            else {
+            } else {
                 row.push({
                     label: cls[i].code,
                     className: css.cell,
