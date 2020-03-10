@@ -5,10 +5,96 @@ export default class CalculationsService {
 
     /**
      * @constructor
-     * @param table
+     * @param rows
      */
-    constructor(table) {
-        this.table = table;
+    constructor(rows) {
+        this.rows = rows;
+        this.TABLE_HEADER_ROWS_COUNT = 2;
+    }
+
+    /**
+     *
+     * @param cell
+     * @param rowIndex
+     * @param colIndex
+     * @param value
+     * @returns {*}
+     */
+    resolveRows(cell, row, colIndex, value) {
+        const rowIndex = row - this.TABLE_HEADER_ROWS_COUNT;
+
+        this.applyChange(cell, rowIndex, colIndex, value);
+
+        this.resolveSaleAmount(cell.label, rowIndex, value);
+
+        this.resolvePrimeCost(cell.label, rowIndex, value);
+
+        return this.rows;
+    }
+
+    /**
+     *
+     * @param cell
+     * @param row
+     * @param col
+     * @param value
+     */
+    applyChange(cell, row, col, value) {
+        this.rows[row] = this.rows[row].map((item, index) => {
+            if (item.label === cell.label && index === col) {
+                item.value = value;
+            }
+
+            return item;
+        });
+    }
+
+    /**
+     *
+     * @param type
+     * @param row
+     * @param value
+     * @returns {*}
+     */
+    resolveSaleAmount(type, row, value) {
+        const dependencies = ["take", "supplierQuantity"];
+
+        if (dependencies.includes(type)) {
+            const saleAmount = this.calcSaleAmount(row);
+
+            this.rows[row].forEach(item => {
+                if (item.label === "quantityForSale") {
+                    item.value = saleAmount;
+                }
+
+                return item;
+            });
+
+            return this.rows;
+        }
+    }
+
+    /**
+     *
+     * @param type
+     * @param row
+     * @param value
+     * @returns {*}
+     */
+    resolvePrimeCost(type, row, value) {
+        const dependencies = ["addExpenses", "supplierSum", "take"];
+
+        if (dependencies.includes(type)) {
+            this.rows[row].forEach(item => {
+                if (item.label === "ownPrice") {
+                    item.value = this.calcPrimeCost(row);
+                }
+
+                return item;
+            });
+
+            return this.rows;
+        }
     }
 
     /**
@@ -18,7 +104,7 @@ export default class CalculationsService {
      * @returns {Array}
      */
     getCurrentRow(index) {
-        return [...this.table[index]];
+        return this.rows[index];
     }
 
     /**
@@ -117,8 +203,6 @@ export default class CalculationsService {
         const sumCellArray = row.filter(item => {
             return item.label === "supplierSum"
         });
-
-        console.log(sumCellArray)
 
         return sumCellArray.map(item => {
             return this.calcSupplierSum(row, item.supplier)
@@ -257,9 +341,8 @@ export default class CalculationsService {
      * @returns {number}
      */
     calcSaleSum(rowIndex) {
-        const row = this.getCurrentRow(rowIndex);
-
         const salePrice = this.calcSalePrice(rowIndex);
+
         const saleAmount = this.calcSaleAmount(rowIndex);
 
         return salePrice * saleAmount;

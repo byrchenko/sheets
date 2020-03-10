@@ -1,6 +1,5 @@
 import React from 'react';
 import css from "./App.module.scss";
-import ReactDataSheet from 'react-datasheet';
 import 'react-datasheet/lib/react-datasheet.css';
 import columns from "./_mock/columns";
 import groups from "./_mock/colGroups";
@@ -10,11 +9,13 @@ import moment from "moment";
 import CalculationsService from "./_service/CalculationsService";
 import SuppliersPopup from "./SuppliersPopup";
 import suppliers from "./_mock/suppliers";
-import Select from 'react-select'
 import DetailTable from "./DetailTable";
 import ControlButtons from "./ControlButtons";
 import SelectCell from "./SelectCell";
 
+/**
+ *
+ */
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -251,6 +252,7 @@ class App extends React.Component {
                 || cls[i].code === "profit"
                 || cls[i].code === "rest"
                 || cls[i].code === "storePrice"
+                || cls[i].code === "supplierSum"
             ) {
                 row.push({
                     label: cls[i].code,
@@ -325,86 +327,16 @@ class App extends React.Component {
      */
     onChange() {
         return changes => {
-            const {groups, columns, rows} = this.state;
+            const {rows} = this.state;
 
-            const grid = [
-                groups,
-                columns,
-                ...rows
-            ];
-
-            /**
-             * Apply changes
-             */
             changes.forEach(({cell, row, col, value}) => {
-                /**
-                 * Input validation
-                 */
-                if (cell.label === "supplierQuantity") {
-                    const price = grid[row].find(item => {
-                        return item.label === "convertedPrice"
-                    });
+               const Calc = new CalculationsService(rows);
 
-                    if (!price.value) {
-                        return null;
-                    }
-                }
-
-                /**
-                 * Change cell value
-                 */
-                if (cell.label === "sellingPrice") {
-                    grid[row][col] = {
-                        ...grid[row][col],
-                        value,
-                        isManualySetted: true
-                    };
-                } else if (cell.label === "margin") {
-                    grid[row].forEach(item => item.label === "sellingPrice" ?
-                        item.isManualySetted = false
-                        : null
-                    );
-
-                    grid[row][col] = {...grid[row][col], value};
-                } else {
-                    grid[row][col] = {...grid[row][col], value};
-                }
-
-                const Calc = new CalculationsService(grid);
-
-                /**
-                 * Recalculate values after changes
-                 */
-                grid[row].forEach(item => {
-                    if (item.label === "quantityForSale") {
-                        return item.value = Calc.calcSaleAmount(row)
-                    }
-
-                    if (item.label === "ownPrice") {
-                        return item.value = Calc.calcPrimeCost(row)
-                    }
-
-                    if (item.label === "margin") {
-                        return item.value = Calc.calcMargin(row)
-                    }
-
-                    if (item.label === "sellingSum") {
-                        return item.value = Calc.calcSaleSum(row)
-                    }
-
-                    if (item.label === "sellingPrice") {
-                        return item.value = Calc.calcSalePrice(row)
-                    }
-
-                    if (item.label === "profit") {
-                        return item.value = Calc.calcProfit(row)
-                    }
+                this.setState({
+                    rows: [...Calc.resolveRows(cell,row, col, value)]
                 });
             });
 
-            this.setState({
-                rows: grid.slice(2)
-            })
         }
     }
 
@@ -426,6 +358,7 @@ class App extends React.Component {
      */
     renderValue() {
         return (cell, i) => {
+
             if (
                 cell.label === "deliveryDate"
                 && cell.value !== undefined
