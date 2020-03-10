@@ -11,7 +11,9 @@ import CalculationsService from "./_service/CalculationsService";
 import SuppliersPopup from "./SuppliersPopup";
 import suppliers from "./_mock/suppliers";
 import Select from 'react-select'
-import {fetchTables, saveTable} from "./_service/ApiMethods";
+import DetailTable from "./DetailTable";
+import ControlButtons from "./ControlButtons";
+import SelectCell from "./SelectCell";
 
 class App extends React.Component {
     constructor(props) {
@@ -27,12 +29,15 @@ class App extends React.Component {
             {label: 'EUR', value: 4.35},
         ];
 
+        this.HEADER_HEIGHT = 2;
+
         this.state = {
             groups: this.createHeaderGroups(),
             columns: this.createHeaderColumns(),
             rows: this.createRows(),
             suppliersPopup: false,
-            сurrency: {},
+            currency: {},
+            activeSuppliers: []
         };
 
         this.createEmptyRow = this.createEmptyRow.bind(this);
@@ -95,10 +100,60 @@ class App extends React.Component {
         return result;
     }
 
+    /**
+     * Get currency value for supplier
+     *
+     * @param supplier
+     * @param rowIndex
+     */
+    currencyValue(supplier, rowIndex) {
+        return supplier && supplier.values[rowIndex]
+            ? supplier.values[rowIndex]
+            : this.options[0]
+    }
+
+    /**
+     * Set currency value for supplier
+     */
+    chooseCurrency(supplierName, rowIndex) {
+        return opt => this.setState(prevState => {
+            const {activeSuppliers} = prevState;
+
+            activeSuppliers.forEach(sup => {
+                if (sup.name === supplierName) {
+                    sup.values[rowIndex] = opt
+                }
+            });
+
+            return {
+                activeSuppliers
+            }
+        })
+    }
+
+    /**
+     *
+     * @returns {function(...[*]=)}
+     */
     addSupplier() {
         return (name) => {
             this.setState(prevState => {
+                const {activeSuppliers} = prevState;
+
+                /**
+                 * If supplier is added do nothing
+                 */
+                if (activeSuppliers.findIndex(item => item.name === name) !== -1) {
+                    return null
+                }
+
+                activeSuppliers.push({
+                    name,
+                    values: {}
+                });
+
                 return {
+                    activeSuppliers,
                     columns: [
                         ...prevState.columns,
                         ...supplierColumns.map(item => {
@@ -118,65 +173,23 @@ class App extends React.Component {
                             readOnly: true
                         }
                     ],
-                    rows: prevState.rows.map(item => {
+                    rows: prevState.rows.map((item, index) => {
+                        const {activeSuppliers} = prevState;
+
+                        const currSupplier = activeSuppliers.find(sup => sup.name === name);
+
                         return [
                             ...item,
                             ...supplierColumns.map(item => {
                                 if (item.code === "currencyId") {
                                     return {
                                         className: css.cell,
-                                        value: "",
                                         label: item.code,
                                         supplier: name,
                                         component: (
-                                            <Select
-                                                styles={{
-                                                    control: (provided) => ({
-                                                        ...provided,
-                                                        minHeight: 'auto',
-                                                        border: 'none',
-                                                        borderRadius: 0,
-                                                        outline: 'none',
-                                                        width: '100%'
-                                                    }),
-                                                    dropdownIndicator: (provided) => ({
-                                                       ...provided,
-                                                        padding: 0,
-                                                    }),
-                                                    input: (provided) => ({
-                                                        ...provided,
-                                                        paddingTop: 0,
-                                                        paddingBottom: 0,
-                                                        paddingLeft: 8,
-                                                        paddingRight: 8,
-                                                        marginTop: 0,
-                                                        marginBottom: 0,
-                                                        fontSize: 12,
-                                                    }),
-                                                    valueContainer: provided => ({
-                                                        ...provided,
-                                                        paddingTop: 1,
-                                                        paddingBottom: 1,
-                                                    }),
-                                                    singleValue: provided => ({
-                                                        ...provided,
-                                                        fontSize: 12,
-                                                    }),
-                                                    option: provided => ({
-                                                        ...provided,
-                                                        fontSize: 12,
-                                                    }),
-                                                    noOptionsMessage: provided => ({
-                                                        ...provided,
-                                                        fontSize: 12
-                                                    }),
-                                                }}
-                                                className={css.select}
-                                                autoFocus={true}
-                                                menuIsOpen={true}
-                                                value={{label: 'KZT', value: 1.55}}
-                                                // onChange={(opt) => this.setState({grocery: _.assign(this.state.grocery, {[id]: opt})})}
-                                                onChange={(opt) => console.log(opt)}
+                                            <SelectCell
+                                                value={this.currencyValue(currSupplier, index)}
+                                                onChange={this.chooseCurrency(name, index)}
                                                 options={this.options}
                                             />
                                         )
@@ -219,6 +232,13 @@ class App extends React.Component {
                     value: id,
                     readOnly: true
                 })
+            }
+
+            /**
+             *
+             */
+            else if (cls[i].code === "currencyId") {
+
             }
 
             /**
@@ -279,7 +299,11 @@ class App extends React.Component {
                 return {
                     rows: [
                         ...rows,
-                        this.createEmptyRow(rows.length + 1, null, [...this.state.columns])
+                        this.createEmptyRow(
+                            rows.length + 1,
+                            null,
+                            [...this.state.columns]
+                        )
                     ]
                 }
             })
@@ -296,6 +320,9 @@ class App extends React.Component {
         })
     }
 
+    /**
+     * Do actions when cell is changed
+     */
     onChange() {
         return changes => {
             const {groups, columns, rows} = this.state;
@@ -381,58 +408,106 @@ class App extends React.Component {
         }
     }
 
-    render() {
-        const {groups, columns, rows, suppliersPopup} = this.state;
+    /**
+     * Generating table grid
+     */
+    generateGrid() {
+        const {groups, columns, rows} = this.state;
+
+        return [
+            groups,
+            columns,
+            ...rows
+        ]
+    }
+
+    /**
+     * Render cell value
+     */
+    renderValue() {
+        return (cell, i) => {
+            if (
+                cell.label === "deliveryDate"
+                && cell.value !== undefined
+                && cell.value !== null
+                && cell.value !== ""
+            ) {
+                return moment(cell.value * 1000).format("DD/MM/YYYY")
+            }
+
+
+            if (cell.label === "currencyId") {
+                const {activeSuppliers} = this.state;
+
+                const currSupplier = activeSuppliers.find(sup => {
+                    return sup.name === cell.supplier
+                });
+
+                const value = currSupplier.values[i - this.HEADER_HEIGHT];
+
+                if (value) {
+                    return value.label
+                }
+
+                return this.options[0].label
+            }
+
+            return cell.value
+        }
+    }
+
+    /**
+     * Render table control buttons
+     */
+    renderControls() {
+        const {suppliersPopup} = this.state;
+
+        if (suppliersPopup) {
+            return null
+        }
 
         return (
-            <>
-                <ReactDataSheet
-                    data={[
-                        groups,
-                        columns,
-                        ...rows
-                    ]}
-                    valueRenderer={(cell) => {
-                        if (
-                            cell.label === "deliveryDate"
-                            && cell.value !== undefined
-                            && cell.value !== null
-                            && cell.value !== ""
-                        ) {
-                            return moment(cell.value * 1000).format("DD/MM/YYYY")
-                        }
+            <ControlButtons
+                addRow={this.addRow()}
+                openSuppliersPopup={this.openSuppliersPopup()}
+            />
+        )
+    }
 
-                        return cell.value
-                    }}
+    /**
+     * Render popup for choosing supplier
+     */
+    renderSuppliersPopup() {
+        const {suppliersPopup} = this.state;
+
+        if (!suppliersPopup) {
+            return null
+        }
+
+        return (
+            <SuppliersPopup
+                list={suppliers}
+                addSupplier={this.addSupplier()}
+                closePopup={this.closeSuppliersPopup()}
+            />
+        )
+    }
+
+    /**
+     *
+     */
+    render() {
+        return (
+            <>
+                <DetailTable
+                    data={this.generateGrid()}
+                    valueRenderer={this.renderValue()}
                     onCellsChanged={this.onChange()}
                 />
 
-                {!suppliersPopup && (
-                    <>
-                        <button
-                            className={css.row}
-                            onClick={this.addRow()}
-                        >
-                            Add row
-                        </button>
+                {this.renderControls()}
 
-
-                        <button
-                            className={css.supplier}
-                            onClick={this.openSuppliersPopup()}
-                        >
-                            Add supplier
-                        </button>
-                    </>
-                )}
-
-                {suppliersPopup && (
-                    <SuppliersPopup
-                        list={suppliers}
-                        addSupplier={this.addSupplier()}
-                        closePopup={this.closeSuppliersPopup()}
-                    />
-                )}
+                {this.renderSuppliersPopup()}
             </>
         )
     }
