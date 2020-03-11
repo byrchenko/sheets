@@ -454,10 +454,6 @@ export default class CalculationsService {
             return item.label === "sellingPrice"
         });
 
-        if (price.isManualySetted) {
-            return +price.value;
-        }
-
         /**
          * Calculate price from margin
          */
