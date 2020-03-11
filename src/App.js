@@ -126,8 +126,19 @@ class App extends React.Component {
                 }
             });
 
+            const {rows} = prevState;
+
+            rows[rowIndex].map(item => {
+                if (item.label === "currencyRate" && item.supplier === supplierName) {
+                    item.value = opt.value
+                }
+
+                return item;
+            });
+
             return {
-                activeSuppliers
+                activeSuppliers,
+                rows
             }
         })
     }
@@ -194,6 +205,17 @@ class App extends React.Component {
                                                 options={this.options}
                                             />
                                         )
+                                    }
+                                }
+
+                                if (["convertedPrice", "supplierSum"].includes(item.code)) {
+                                    return {
+                                        className: css.cell,
+                                        value: "",
+                                        label: item.code,
+                                        supplier: name,
+                                        readOnly: true
+
                                     }
                                 }
 

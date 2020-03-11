@@ -15,7 +15,7 @@ export default class CalculationsService {
     /**
      *
      * @param cell
-     * @param rowIndex
+     * @param row
      * @param colIndex
      * @param value
      * @returns {*}
@@ -28,6 +28,10 @@ export default class CalculationsService {
         this.resolveSaleAmount(cell.label, rowIndex, value);
 
         this.resolvePrimeCost(cell.label, rowIndex, value);
+
+        this.resolveSupplierSum(cell.label, cell.supplier, rowIndex, value);
+        
+        this.resolveConvertedPrice(cell.label, cell.supplier, rowIndex, value);
 
         return this.rows;
     }
@@ -65,6 +69,58 @@ export default class CalculationsService {
             this.rows[row].forEach(item => {
                 if (item.label === "quantityForSale") {
                     item.value = saleAmount;
+                }
+
+                return item;
+            });
+
+            return this.rows;
+        }
+    }
+
+    /**
+     *
+     * @param type
+     * @param supplier
+     * @param row
+     * @param value
+     * @returns {*}
+     */
+    resolveSupplierSum(type, supplier, row, value) {
+        const dependencies = ["price", "supplierQuantity", "currencyId", "currencyRate"];
+
+        if (dependencies.includes(type)) {
+            const value = this.calcSupplierSum(row, supplier);
+
+            this.rows[row].forEach(item => {
+                if (item.label === "supplierSum" && item.supplier === supplier) {
+                    item.value = value;
+                }
+
+                return item;
+            });
+
+            return this.rows;
+        }
+    }
+    
+    /**
+     *
+     * @param type
+     * @param supplier
+     * @param row
+     * @param value
+     * @returns {*}
+     */
+    resolveConvertedPrice(type, supplier, row, value) {
+        const dependencies = ["price", "currencyId", "currencyRate"];
+
+        if (dependencies.includes(type)) {
+            const value = this.calcConvertedPrice(row, supplier);
+
+            this.rows[row].forEach(item => {
+                if (item.label === "convertedPrice" && item.supplier === supplier) {
+                    item.value = value;
                 }
 
                 return item;
@@ -172,14 +228,13 @@ export default class CalculationsService {
     /**
      * Calculating supplier sum
      *
-     * @param row {Array} - Destination row array
+     * @param rowIndex
      * @param supplier {string}
      */
-    calcSupplierSum(row, supplier) {
-        const price = row.find(item => {
-            return item.supplier === supplier
-                && item.label === "convertedPrice"
-        }).value;
+    calcSupplierSum(rowIndex, supplier) {
+        const row = this.getCurrentRow(rowIndex);
+
+        const price = this.calcConvertedPrice(rowIndex, supplier);
 
         const purchaseAmount = row.find(item => {
             return item.supplier === supplier
@@ -192,10 +247,11 @@ export default class CalculationsService {
     /**
      * Sum values from all suppliers
      *
-     * @param row {Array} - Destination row array
      * @returns {Array}
+     * @param rowIndex
      */
-    calcSuppliersSum(row) {
+    calcSuppliersSum(rowIndex) {
+        const row = this.getCurrentRow(rowIndex);
 
         /**
          * Array of "Sum" cells for all suppliers
@@ -205,7 +261,7 @@ export default class CalculationsService {
         });
 
         return sumCellArray.map(item => {
-            return this.calcSupplierSum(row, item.supplier)
+            return this.calcSupplierSum(rowIndex, item.supplier)
         })
     }
 
@@ -253,7 +309,7 @@ export default class CalculationsService {
      */
     calcPrimeCost(rowIndex) {
         const row = this.getCurrentRow(rowIndex);
-        const suppliersSum = this.calcSuppliersSum(row);
+        const suppliersSum = this.calcSuppliersSum(rowIndex);
         const additionalExpenses = this.getAdditionalExpenses(row);
         const saleAmount = this.calcSaleAmount(rowIndex);
         const stockSum = this.calcStockSum(row);
@@ -346,6 +402,21 @@ export default class CalculationsService {
         const saleAmount = this.calcSaleAmount(rowIndex);
 
         return salePrice * saleAmount;
+    }
+
+    /**
+     *
+     * @param rowIndex
+     * @param supplier
+     * @returns {number}
+     */
+    calcConvertedPrice(rowIndex, supplier) {
+        const row = this.getCurrentRow(rowIndex);
+
+        const price = +row.find(item => item.label === "price" && item.supplier === supplier).value;
+        const rate = +row.find(item => item.label === "currencyRate" && item.supplier === supplier).value;
+
+        return price * rate;
     }
 
     /**
