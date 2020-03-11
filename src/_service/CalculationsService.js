@@ -221,7 +221,7 @@ export default class CalculationsService {
      * @returns {*}
      */
     resolvePrimeCost(type, row, value) {
-        const dependencies = ["addExpenses", "supplierSum", "take"];
+        const dependencies = ["quantityForSale", "addExpenses", "supplierSum", "take"];
 
         if (dependencies.includes(type)) {
             this.rows[row].forEach(item => {
@@ -361,10 +361,18 @@ export default class CalculationsService {
 
         const stockAmount = this.getStoreAmount(row);
 
-        return [
+        const currentValue = +row.find(item => item.label === "quantityForSale").value;
+
+        const amount = [
             ...suppliersAmount,
             stockAmount
-        ].reduce((acc, next) => acc + next, 0)
+        ].reduce((acc, next) => acc + next, 0);
+
+        if (!amount && currentValue) {
+            return currentValue;
+        }
+
+        return amount;
     }
 
     /**
@@ -394,15 +402,20 @@ export default class CalculationsService {
         const row = this.getCurrentRow(rowIndex);
         const suppliersSum = this.calcSuppliersSum(rowIndex);
         const additionalExpenses = this.getAdditionalExpenses(row);
-        const saleAmount = this.calcSaleAmount(rowIndex);
+        const saleAmount = +row.find(item => item.label === "quantityForSale").value;
         const stockSum = this.calcStockSum(row);
+        const price = +row.find(item => item.label === "storePrice").value;
 
         const allSuppliersSum = suppliersSum.reduce((acc, next) => acc + next, 0);
 
         const totalPrimeCost = stockSum + additionalExpenses + allSuppliersSum;
 
-        if (!totalPrimeCost || !saleAmount) {
-            return 0
+        if (!saleAmount) {
+            return 0;
+        }
+
+        if (!totalPrimeCost) {
+            return price;
         }
 
         return totalPrimeCost / saleAmount;
