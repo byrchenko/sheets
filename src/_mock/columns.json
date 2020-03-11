@@ -68,6 +68,13 @@
     "edit": "date"
   },
   {
+    "label": "Срок поставки, дней",
+    "code": "deliveryTerm",
+    "group": "common",
+    "width": 100,
+    "edit": "date"
+  },
+  {
     "label": "Кол-во к продаже",
     "code": "quantityForSale",
     "group": "selling",

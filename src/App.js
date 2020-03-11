@@ -20,7 +20,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
 
-        this.HEADER_WIDTH = 19;
+        this.HEADER_WIDTH = 20;
         this.HEADER_GROUP_COUNT = 3;
 
         this.options = [

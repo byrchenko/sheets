@@ -29,8 +29,18 @@ export default class CalculationsService {
 
         this.resolvePrimeCost(cell.label, rowIndex, value);
 
+        this.resolvePrimeCost(cell.label, rowIndex, value);
+
+        this.resolveMargin(cell.label, rowIndex, value);
+
+        this.resolveSalePrice(cell.label, rowIndex, value);
+
+        this.resolveSaleSum(cell.label, rowIndex, value);
+
+        this.resolveProfit(cell.label, rowIndex, value);
+
         this.resolveSupplierSum(cell.label, cell.supplier, rowIndex, value);
-        
+
         this.resolveConvertedPrice(cell.label, cell.supplier, rowIndex, value);
 
         return this.rows;
@@ -51,6 +61,79 @@ export default class CalculationsService {
 
             return item;
         });
+    }
+
+    /**
+     *
+     * @param type
+     * @param row
+     * @param value
+     * @returns {*}
+     */
+    resolveMargin(type, row, value) {
+        const dependencies = ["sellingPrice"];
+
+        if (dependencies.includes(type)) {
+            const value = this.calcMargin(row);
+
+            this.rows[row].forEach(item => {
+                if (item.label === "margin") {
+                    item.value = value;
+                }
+
+                return item;
+            });
+
+            return this.rows;
+        }
+    }
+
+    resolveSalePrice(type, row, cellValue) {
+        const dependencies = ["margin"];
+
+        // if (dependencies.includes(type)) {
+        const value = this.calcSalePrice(row);
+
+        this.rows[row].forEach(item => {
+            if (item.label === "sellingPrice") {
+                item.value = value;
+            }
+
+            return item;
+        });
+
+        return this.rows;
+
+    }
+
+    resolveSaleSum(type, row, cellValue) {
+        const dependencies = ["sellingPrice", "quantityForSale"];
+
+        const value = this.calcSaleSum(row);
+
+        this.rows[row].forEach(item => {
+            if (item.label === "sellingSum") {
+                item.value = value;
+            }
+
+            return item;
+        });
+
+        return this.rows;
+    }
+
+    resolveProfit(type, row, cellValue) {
+        const value = this.calcProfit(row);
+
+        this.rows[row].forEach(item => {
+            if (item.label === "profit") {
+                item.value = value;
+            }
+
+            return item;
+        });
+
+        return this.rows;
     }
 
     /**
@@ -103,7 +186,7 @@ export default class CalculationsService {
             return this.rows;
         }
     }
-    
+
     /**
      *
      * @param type
@@ -190,7 +273,7 @@ export default class CalculationsService {
             return item.label === "take"
         });
 
-        if(!amount.value) {
+        if (!amount.value) {
             return 0;
         }
 
@@ -347,12 +430,6 @@ export default class CalculationsService {
         const row = this.getCurrentRow(rowIndex);
         const salePrice = this.getSalePrice(row);
         const primeCost = this.calcPrimeCost(rowIndex);
-
-        const isPriceSetted = row.find(item => item.label === "sellingPrice").isManualySetted;
-
-        if (!isPriceSetted) {
-            return +row.find(item => item.label === "margin").value;
-        }
 
         if (!primeCost || !salePrice) {
             return 0
