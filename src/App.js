@@ -1,6 +1,7 @@
 import React from 'react';
 import css from "./App.module.scss";
 import 'react-datasheet/lib/react-datasheet.css';
+import "react-datepicker/dist/react-datepicker.css";
 import columns from "./_mock/columns";
 import groups from "./_mock/colGroups";
 import rows from "./_mock/rows";
@@ -13,6 +14,7 @@ import DetailTable from "./DetailTable";
 import ControlButtons from "./ControlButtons";
 import SelectCell from "./SelectCell";
 import products from "./_mock/products";
+import DatePicker from "react-datepicker";
 
 /**
  *
@@ -41,6 +43,7 @@ class App extends React.Component {
             currency: {},
             activeSuppliers: [],
             products: {},
+            deliveryDates: {}
         };
     }
 
@@ -308,6 +311,17 @@ class App extends React.Component {
 
     /**
      *
+     * @param rowIndex
+     * @returns {*}
+     */
+    getDeliveryDate(rowIndex) {
+        return this.state.deliveryDates[rowIndex]
+            ? this.state.deliveryDates[rowIndex]
+            : new Date()
+    }
+
+    /**
+     *
      * @param id
      * @param item
      * @param cls
@@ -328,13 +342,33 @@ class App extends React.Component {
                     value: id,
                     readOnly: true
                 })
+            } else if (cls[i].code === "deliveryDate") {
+                row.push({
+                    label: cls[i].code,
+                    className: css.cell,
+                    component: (
+                        <DatePicker
+                            selected={this.getDeliveryDate(id - 1)}
+                            onChange={date => this.setState(prevState => {
+                                const {deliveryDates} = prevState;
+
+                                deliveryDates[id - 1] = date;
+
+                                return {
+                                    deliveryDates
+                                }
+                            })}
+                            className={css.calendar}
+                        />
+                    ),
+                    value: item ? item[cls[i].code] : ""
+                });
             }
 
             /**
              *
              */
             else if (cls[i].code === "productId") {
-                console.log(this.state.products[id - 1]);
                 row.push({
                     className: css.cell,
                     label: cls[i].code,
@@ -449,8 +483,6 @@ class App extends React.Component {
         return changes => {
             const {rows, products} = this.state;
 
-            console.log(products, "=========")
-
             changes.forEach(({cell, row, col, value}) => {
                 const Calc = new CalculationsService(rows, products);
 
@@ -467,6 +499,35 @@ class App extends React.Component {
      */
     generateGrid() {
         const {groups, columns, rows} = this.state;
+
+        rows.forEach((row, rowIndex) => {
+            row.forEach(cell => {
+                if (cell.label === "deliveryDate") {
+                    console.log(cell);
+                    cell.component = (
+                            <DatePicker
+                                selected={this.getDeliveryDate(rowIndex)}
+                                onChange={date => this.setState(prevState => {
+                                    const {deliveryDates} = prevState;
+
+                                    deliveryDates[rowIndex] = date;
+
+                                    return {
+                                        deliveryDates
+                                    }
+                                })}
+                                className={css.calendar}
+                            />
+                        );
+
+                        cell.value = this.state.deliveryDates[rowIndex]
+                            ? this.state.deliveryDates[rowIndex]
+                            : ""
+                }
+            })
+        });
+
+        console.log(rows[0] ? rows[0][8] : null);
 
         return [
             groups,
@@ -487,7 +548,7 @@ class App extends React.Component {
                 && cell.value !== null
                 && cell.value !== ""
             ) {
-                return moment(cell.value * 1000).format("DD/MM/YYYY")
+                return moment(cell.value).format("DD/MM/YYYY")
             }
 
 

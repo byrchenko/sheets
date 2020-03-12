@@ -21,8 +21,7 @@ export default class CalculationsService {
      * @param value
      * @returns {*}
      */
-    resolveRows(cell, row, colIndex, value, products) {
-        console.log(this.products, "111", cell)
+    resolveRows(cell, row, colIndex, value) {
         const rowIndex = row - this.TABLE_HEADER_ROWS_COUNT;
 
         this.applyChange(cell, rowIndex, colIndex, value);
