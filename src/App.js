@@ -348,6 +348,8 @@ class App extends React.Component {
                     className: css.cell,
                     component: (
                         <DatePicker
+                            autoFocus={true}
+                            dateFormat={"dd/MM/yyyy"}
                             selected={this.getDeliveryDate(id - 1)}
                             onChange={date => this.setState(prevState => {
                                 const {deliveryDates} = prevState;
@@ -506,6 +508,8 @@ class App extends React.Component {
                     console.log(cell);
                     cell.component = (
                             <DatePicker
+                                autoFocus={true}
+                                dateFormat={"dd/MM/yyyy"}
                                 selected={this.getDeliveryDate(rowIndex)}
                                 onChange={date => this.setState(prevState => {
                                     const {deliveryDates} = prevState;
