@@ -12,6 +12,7 @@ import suppliers from "./_mock/suppliers";
 import DetailTable from "./DetailTable";
 import ControlButtons from "./ControlButtons";
 import SelectCell from "./SelectCell";
+import products from "./_mock/products";
 
 /**
  *
@@ -24,7 +25,7 @@ class App extends React.Component {
         this.HEADER_GROUP_COUNT = 3;
 
         this.options = [
-            {label: 'KZT', value: 2.35},
+            {label: 'KZT', value: 1},
             {label: 'RUB', value: 3.05},
             {label: 'USD', value: 3.99},
             {label: 'EUR', value: 4.35},
@@ -33,15 +34,25 @@ class App extends React.Component {
         this.HEADER_HEIGHT = 2;
 
         this.state = {
+            groups: [],
+            columns: [],
+            rows: [],
+            suppliersPopup: false,
+            currency: {},
+            activeSuppliers: [],
+            products: {},
+        };
+    }
+
+    /**
+     *
+     */
+    componentDidMount() {
+        this.setState({
             groups: this.createHeaderGroups(),
             columns: this.createHeaderColumns(),
             rows: this.createRows(),
-            suppliersPopup: false,
-            currency: {},
-            activeSuppliers: []
-        };
-
-        this.createEmptyRow = this.createEmptyRow.bind(this);
+        })
     }
 
     /**
@@ -144,6 +155,46 @@ class App extends React.Component {
     }
 
     /**
+     * Set currency value for supplier
+     */
+    chooseProduct(rowIndex) {
+        return opt => this.setState(prevState => {
+            const {products} = prevState;
+
+            products[rowIndex] = opt;
+
+            const {rows} = prevState;
+
+            rows[rowIndex] = rows[rowIndex].map(item => {
+                if (item.label === "rest") {
+                    item.value = opt.value.rests || ""
+                }
+
+                if (item.label === "storePrice") {
+                    item.value = opt.value.prices ? opt.value.prices.find(item => item.name === "Приходная").price : 0;
+                }
+
+                if (item.label === "retailPrice") {
+                    item.value = opt.value.prices ? opt.value.prices.find(item => item.name === "Розничная").price : 0;
+                }
+
+                console.log(opt)
+
+                if (item.label === "productId") {
+                    item.value = opt.value.name;
+                }
+
+                return item;
+            });
+
+            return {
+                products,
+                rows
+            }
+        })
+    }
+
+    /**
      *
      * @returns {function(...[*]=)}
      */
@@ -208,6 +259,15 @@ class App extends React.Component {
                                     }
                                 }
 
+                                if (item.code === "currencyRate") {
+                                    return {
+                                        className: css.cell,
+                                        value: 1,
+                                        label: item.code,
+                                        supplier: name
+                                    }
+                                }
+
                                 if (["convertedPrice", "supplierSum"].includes(item.code)) {
                                     return {
                                         className: css.cell,
@@ -231,6 +291,19 @@ class App extends React.Component {
                 }
             })
         }
+    }
+
+    /**
+     *
+     * @returns {*}
+     */
+    createProductOptions() {
+        return products.map(item => {
+            return {
+                label: item.name,
+                value: {...item},
+            }
+        })
     }
 
     /**
@@ -260,8 +333,20 @@ class App extends React.Component {
             /**
              *
              */
-            else if (cls[i].code === "currencyId") {
-
+            else if (cls[i].code === "productId") {
+                console.log(this.state.products[id - 1]);
+                row.push({
+                    className: css.cell,
+                    label: cls[i].code,
+                    component: (
+                        <SelectCell
+                            value={this.getProductOption(id - 1)}
+                            onChange={this.chooseProduct(id - 1)}
+                            options={this.createProductOptions()}
+                        />
+                    ),
+                    value: this.getProductValue(id - 1)
+                })
             }
 
             /**
@@ -312,6 +397,18 @@ class App extends React.Component {
         return row;
     }
 
+    getProductOption(rowIndex) {
+        const {products} = this.state;
+
+        return products[rowIndex]
+    }
+
+    getProductValue(rowIndex) {
+        const {products} = this.state;
+
+        return products[rowIndex] ? products[rowIndex].value.name : "";
+    }
+
     /**
      *
      */
@@ -323,7 +420,8 @@ class App extends React.Component {
                 return {
                     rows: [
                         ...rows,
-                        this.createEmptyRow(
+                        this.createEmptyRow.call(
+                            this,
                             rows.length + 1,
                             null,
                             [...this.state.columns]
@@ -340,7 +438,7 @@ class App extends React.Component {
      */
     createRows() {
         return rows.map((el, index) => {
-            return this.createEmptyRow(index + 1, el, columns)
+            return this.createEmptyRow.call(this, index + 1, el, columns);
         })
     }
 
@@ -349,13 +447,15 @@ class App extends React.Component {
      */
     onChange() {
         return changes => {
-            const {rows} = this.state;
+            const {rows, products} = this.state;
+
+            console.log(products, "=========")
 
             changes.forEach(({cell, row, col, value}) => {
-               const Calc = new CalculationsService(rows);
+                const Calc = new CalculationsService(rows, products);
 
                 this.setState({
-                    rows: [...Calc.resolveRows(cell,row, col, value)]
+                    rows: [...Calc.resolveRows(cell, row, col, value)]
                 });
             });
 

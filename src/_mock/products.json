@@ -9,10 +9,16 @@
         "id": 1,
         "price": 123,
         "currency": "KZT",
-        "name": "BASE"
+        "name": "Приходная"
+      },
+      {
+        "id": 2,
+        "price": 123,
+        "currency": "KZT",
+        "name": "Розничная"
       }
     ],
-    "rests": null
+    "rests": 30
   },
   {
     "id": 8112,
@@ -1987,8 +1993,5 @@
     "vendorCode": "791FEA06",
     "prices": null,
     "rests": null
-  },
-  {
-    "id": 8336,
-    "name": "Аренда аудио-видео оборудование",
-    "xmlId": "13132308-f468-11e8-9c18-2c4d,
+  }
+]

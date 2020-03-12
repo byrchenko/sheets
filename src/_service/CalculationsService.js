@@ -7,8 +7,9 @@ export default class CalculationsService {
      * @constructor
      * @param rows
      */
-    constructor(rows) {
+    constructor(rows, products) {
         this.rows = rows;
+        this.products = products;
         this.TABLE_HEADER_ROWS_COUNT = 2;
     }
 
@@ -20,7 +21,8 @@ export default class CalculationsService {
      * @param value
      * @returns {*}
      */
-    resolveRows(cell, row, colIndex, value) {
+    resolveRows(cell, row, colIndex, value, products) {
+        console.log(this.products, "111", cell)
         const rowIndex = row - this.TABLE_HEADER_ROWS_COUNT;
 
         this.applyChange(cell, rowIndex, colIndex, value);
@@ -42,6 +44,13 @@ export default class CalculationsService {
         this.resolveSupplierSum(cell.label, cell.supplier, rowIndex, value);
 
         this.resolveConvertedPrice(cell.label, cell.supplier, rowIndex, value);
+
+        if (cell.label === "productId") {
+            this.rows[rowIndex].forEach(item => item.label === "productId"
+                ? item.value =  this.products[rowIndex].label
+                : null
+            )
+        }
 
         return this.rows;
     }
@@ -221,7 +230,7 @@ export default class CalculationsService {
      * @returns {*}
      */
     resolvePrimeCost(type, row, value) {
-        const dependencies = ["quantityForSale", "addExpenses", "supplierSum", "take"];
+        const dependencies = ["quantityForSale", "supplierQuantity", "addExpenses", "supplierSum", "take"];
 
         if (dependencies.includes(type)) {
             this.rows[row].forEach(item => {
@@ -417,6 +426,8 @@ export default class CalculationsService {
         if (!totalPrimeCost) {
             return price;
         }
+
+        console.log(totalPrimeCost / saleAmount)
 
         return totalPrimeCost / saleAmount;
     }
